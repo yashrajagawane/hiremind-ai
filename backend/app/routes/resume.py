@@ -2,6 +2,8 @@ from fastapi import APIRouter, UploadFile, File
 import shutil
 import os
 
+from app.services.resume_parser import parse_resume
+
 router = APIRouter(
     prefix="/resume",
     tags=["Resume"]
@@ -9,44 +11,28 @@ router = APIRouter(
 
 UPLOAD_FOLDER = "uploads"
 
-# Create uploads folder if not exists
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 
+# =========================
+# UPLOAD RESUME
+# =========================
 @router.post("/upload")
 async def upload_resume(
     file: UploadFile = File(...)
 ):
 
-    # File validation
-    allowed_extensions = [".pdf", ".docx"]
-
-    file_extension = os.path.splitext(
-        file.filename
-    )[1]
-
-    if file_extension not in allowed_extensions:
-
-        return {
-            "success": False,
-            "message": "Only PDF or DOCX files allowed"
-        }
-
-    # Save file path
     file_path = f"{UPLOAD_FOLDER}/{file.filename}"
 
-    # Save file
     with open(file_path, "wb") as buffer:
+        shutil.copyfileobj(file.file, buffer)
 
-        shutil.copyfileobj(
-            file.file,
-            buffer
-        )
+    # Extract text from resume
+    extracted_text = parse_resume(file_path)
 
     return {
-
         "success": True,
         "message": "Resume uploaded successfully 🚀",
-
-        "filename": file.filename
+        "filename": file.filename,
+        "resume_text": extracted_text[:3000]
     }

@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.routes.auth import router as auth_router
+from app.routes.resume import router as resume_router
+
 from app.database.db import engine
 from app.models.user import User
 
@@ -10,7 +12,9 @@ User.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-# CORS Middleware
+# =========================
+# CORS MIDDLEWARE
+# =========================
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -19,12 +23,18 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Routes
+# =========================
+# ROUTES
+# =========================
 app.include_router(auth_router)
+app.include_router(resume_router)
 
-# Home Route
+# =========================
+# HOME ROUTE
+# =========================
 @app.get("/")
 def home():
+
     return {
         "message": "HireMind AI Backend Running Successfully 🚀"
     }

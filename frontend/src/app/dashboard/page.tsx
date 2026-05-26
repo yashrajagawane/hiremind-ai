@@ -2,37 +2,96 @@
 
 import { useEffect, useState } from "react";
 
+import Sidebar from "@/components/Sidebar";
+import Topbar from "@/components/Topbar";
+import StatCard from "@/components/StatCard";
+import ResumeUpload from "@/components/ResumeUpload";
+
+import {
+  FileText,
+  Target,
+  Brain,
+  Bot,
+} from "lucide-react";
+
 export default function DashboardPage() {
+  const [user, setUser] = useState<any>(null);
+  const [collapsed, setCollapsed] = useState(false);
 
-    const [user, setUser] = useState<any>(null);
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
 
-    useEffect(() => {
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
 
-        const storedUser = localStorage.getItem("user");
+  return (
+    <div
+      className="
+      min-h-screen
+      bg-black
+      text-white
+    "
+    >
+      {/* SIDEBAR */}
+      <Sidebar
+        collapsed={collapsed}
+        setCollapsed={setCollapsed}
+        user={user}
+      />
 
-        if (storedUser) {
+      {/* MAIN CONTENT */}
+      <div
+        className={`
+        transition-all duration-300
+        ${collapsed ? "ml-[90px]" : "ml-[260px]"}
+      `}
+      >
+        {/* TOPBAR */}
+        <Topbar />
 
-            setUser(JSON.parse(storedUser));
-        }
+        {/* CONTENT */}
+        <div className="p-8">
+          {/* UPLOAD */}
+          <ResumeUpload />
 
-    }, []);
+          {/* STATS */}
+          <div
+            className="
+            grid grid-cols-1
+            md:grid-cols-2
+            xl:grid-cols-4
+            gap-6
+            mt-8
+          "
+          >
+            <StatCard
+              title="Total Resumes"
+              value="12"
+              icon={<FileText size={26} />}
+            />
 
-    return (
+            <StatCard
+              title="ATS Score"
+              value="86%"
+              icon={<Target size={26} />}
+            />
 
-        <div className="min-h-screen bg-black flex items-center justify-center text-white">
+            <StatCard
+              title="Skills Found"
+              value="24"
+              icon={<Brain size={26} />}
+            />
 
-            <div className="text-center">
-
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-white to-[#8B5CF6] bg-clip-text text-transparent mb-4">
-                    Dashboard 🚀
-                </h1>
-
-                <p className="text-[#C4B5FD] text-lg">
-                    Welcome {user?.full_name}
-                </p>
-
-            </div>
-
+            <StatCard
+              title="AI Interviews"
+              value="5"
+              icon={<Bot size={26} />}
+            />
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }

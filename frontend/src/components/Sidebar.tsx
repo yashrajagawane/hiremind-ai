@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import {
   LayoutDashboard,
   FileText,
@@ -22,34 +24,48 @@ export default function Sidebar({
   setCollapsed,
   user,
 }: SidebarProps) {
+
   const menuItems = [
+
     {
       name: "Dashboard",
+      href: "/dashboard",
       icon: <LayoutDashboard size={20} />,
     },
+
     {
-      name: "Resume Analyzer",
+      name: "Resume Review",
+      href: "/resume-review",
       icon: <FileText size={20} />,
     },
+
     {
-      name: "ATS Score",
+      name: "AI Job Match",
+      href: "/ai-job-match",
       icon: <Target size={20} />,
     },
+
     {
       name: "AI Interview",
+      href: "/ai-interview",
       icon: <Brain size={20} />,
     },
+
     {
-      name: "Analytics",
+      name: "Career Analytics",
+      href: "/career-analytics",
       icon: <BarChart3 size={20} />,
     },
+
     {
       name: "Settings",
+      href: "/settings",
       icon: <Settings size={20} />,
     },
   ];
 
   return (
+
     <aside
       className={`
       fixed top-0 left-0 h-screen
@@ -61,8 +77,10 @@ export default function Sidebar({
       ${collapsed ? "w-[90px]" : "w-[260px]"}
     `}
     >
+
       {/* TOP */}
       <div>
+
         {/* LOGO */}
         <div
           className="
@@ -72,7 +90,9 @@ export default function Sidebar({
           border-b border-white/5
         "
         >
+
           {!collapsed && (
+
             <h1
               className="
               text-2xl font-bold
@@ -85,6 +105,7 @@ export default function Sidebar({
             >
               HireMind AI
             </h1>
+
           )}
 
           <button
@@ -102,19 +123,25 @@ export default function Sidebar({
             transition-all duration-300
           "
           >
+
             {collapsed ? (
               <ChevronRight size={18} />
             ) : (
               <ChevronLeft size={18} />
             )}
+
           </button>
+
         </div>
 
         {/* MENU */}
         <div className="p-4 space-y-3">
+
           {menuItems.map((item, index) => (
-            <button
+
+            <Link
               key={index}
+              href={item.href}
               className="
               w-full
               flex items-center gap-4
@@ -131,6 +158,7 @@ export default function Sidebar({
               group
             "
             >
+
               <span
                 className="
                 text-[#6EA8FF]
@@ -142,17 +170,24 @@ export default function Sidebar({
               </span>
 
               {!collapsed && (
+
                 <span className="text-sm font-medium tracking-wide">
                   {item.name}
                 </span>
+
               )}
-            </button>
+
+            </Link>
+
           ))}
+
         </div>
+
       </div>
 
       {/* USER */}
       <div className="p-4 border-t border-white/5">
+
         <div
           className="
           flex items-center gap-3
@@ -162,6 +197,7 @@ export default function Sidebar({
           border border-white/5
         "
         >
+
           <div
             className="
             w-10 h-10
@@ -177,7 +213,9 @@ export default function Sidebar({
           </div>
 
           {!collapsed && (
+
             <div className="text-left">
+
               <p className="text-xs text-gray-500">
                 Logged in as
               </p>
@@ -185,10 +223,15 @@ export default function Sidebar({
               <p className="text-sm text-white font-medium">
                 {user?.full_name}
               </p>
+
             </div>
+
           )}
+
         </div>
+
       </div>
+
     </aside>
   );
 }

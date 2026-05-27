@@ -21,6 +21,10 @@ from app.services.groq_ats import (
     generate_ai_ats_analysis
 )
 
+from app.services.groq_jd_analyzer import (
+    analyze_resume_with_jd
+)
+
 router = APIRouter(
     prefix="/resume",
     tags=["Resume"]
@@ -33,6 +37,11 @@ os.makedirs(
     exist_ok=True
 )
 
+# =========================
+# TEMP RESUME STORAGE
+# =========================
+LAST_RESUME_TEXT = ""
+
 
 # =========================
 # UPLOAD RESUME
@@ -41,6 +50,8 @@ os.makedirs(
 async def upload_resume(
     file: UploadFile = File(...)
 ):
+
+    global LAST_RESUME_TEXT
 
     # =========================
     # SAVE FILE
@@ -72,6 +83,11 @@ async def upload_resume(
     extracted_text = clean_text(
         extracted_text
     )
+
+    # =========================
+    # STORE RESUME TEXT
+    # =========================
+    LAST_RESUME_TEXT = extracted_text
 
     # =========================
     # NLP EXTRACTIONS
@@ -211,3 +227,45 @@ async def upload_resume(
         "resume_text":
         extracted_text[:1500],
     }
+
+
+# =========================
+# AI JOB MATCHING
+# =========================
+@router.post("/ai-job-match")
+async def ai_job_match(data: dict):
+
+    global LAST_RESUME_TEXT
+
+    job_description = data.get(
+        "job_description",
+        ""
+    )
+
+    # =========================
+    # VALIDATION
+    # =========================
+    if not LAST_RESUME_TEXT:
+
+        return {
+            "error":
+            "Please upload resume first"
+        }
+
+    if not job_description:
+
+        return {
+            "error":
+            "job_description is required"
+        }
+
+    # =========================
+    # AI ANALYSIS
+    # =========================
+    result = analyze_resume_with_jd(
+
+        LAST_RESUME_TEXT,
+        job_description
+    )
+
+    return result

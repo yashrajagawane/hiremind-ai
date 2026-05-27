@@ -4,10 +4,6 @@ export default function AIInterviewPage() {
 
     <div className="text-white p-8">
 
-      <h1 className="text-4xl font-bold">
-        AI Interview
-      </h1>
-
     </div>
   );
 }

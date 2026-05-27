@@ -11,7 +11,18 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
-export default function ResumeUpload() {
+
+
+interface ResumeUploadProps {
+
+  setAtsData: (data: any) => void;
+}
+
+
+
+export default function ResumeUpload({
+  setAtsData,
+}: ResumeUploadProps) {
 
   const [loading, setLoading] =
     useState(false);
@@ -39,6 +50,8 @@ export default function ResumeUpload() {
 
     setMessage("");
 
+
+
     try {
 
       setLoading(true);
@@ -50,6 +63,11 @@ export default function ResumeUpload() {
         file
       );
 
+
+
+      // =========================
+      // API CALL
+      // =========================
       const response = await axios.post(
         "http://127.0.0.1:8000/resume/upload",
         formData,
@@ -61,9 +79,23 @@ export default function ResumeUpload() {
         }
       );
 
+
+
+      // =========================
+      // SET ATS DATA
+      // =========================
+      setAtsData(response.data);
+
+
+
+      // =========================
+      // SUCCESS MESSAGE
+      // =========================
       setMessage(
         response.data.message
       );
+
+
 
     } catch (error: any) {
 
@@ -108,6 +140,8 @@ export default function ResumeUpload() {
           </p>
 
         </div>
+
+
 
         <div
           className="
@@ -220,6 +254,8 @@ export default function ResumeUpload() {
             {loading
               ? "Uploading..."
               : "Choose Resume"}
+
+
 
             <input
               type="file"

@@ -9,6 +9,7 @@ export default function StatCard({
   value,
   icon,
 }: StatCardProps) {
+
   return (
     <div
       className="
@@ -21,6 +22,7 @@ export default function StatCard({
       transition-all duration-300
     "
     >
+
       <div>
         <p className="text-gray-400 text-sm mb-2">
           {title}
@@ -45,6 +47,7 @@ export default function StatCard({
       >
         {icon}
       </div>
+
     </div>
   );
 }

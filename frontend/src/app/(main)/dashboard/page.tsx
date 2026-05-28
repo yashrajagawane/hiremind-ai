@@ -10,25 +10,19 @@ import {
   Target,
   Brain,
   AlertTriangle,
-  Sparkles,
   TrendingUp,
 } from "lucide-react";
 
 export default function DashboardPage() {
-
   const [atsData, setAtsData] =
     useState<any>(null);
 
   return (
-
     <div>
-      
       {/* UPLOAD */}
       <ResumeUpload
         setAtsData={setAtsData}
       />
-
-
 
       {/* STATS */}
       <div
@@ -40,14 +34,11 @@ export default function DashboardPage() {
         mt-8
       "
       >
-
         <StatCard
           title="Total Resumes"
           value="1"
           icon={<FileText size={26} />}
         />
-
-
 
         <StatCard
           title="ATS Score"
@@ -59,8 +50,6 @@ export default function DashboardPage() {
           icon={<Target size={26} />}
         />
 
-
-
         <StatCard
           title="Skills Found"
           value={
@@ -69,8 +58,6 @@ export default function DashboardPage() {
           icon={<Brain size={26} />}
         />
 
-
-
         <StatCard
           title="Missing Skills"
           value={
@@ -78,14 +65,10 @@ export default function DashboardPage() {
           }
           icon={<AlertTriangle size={26} />}
         />
-
       </div>
-
-
 
       {/* ATS ANALYTICS */}
       {atsData && (
-
         <div
           className="
           grid grid-cols-1
@@ -94,7 +77,6 @@ export default function DashboardPage() {
           mt-8
         "
         >
-
           {/* ATS SCORE */}
           <div
             className="
@@ -109,7 +91,6 @@ export default function DashboardPage() {
             overflow-hidden
           "
           >
-
             {/* Glow */}
             <div
               className="
@@ -121,8 +102,6 @@ export default function DashboardPage() {
               rounded-full
             "
             />
-
-
 
             <div
               className="
@@ -136,7 +115,6 @@ export default function DashboardPage() {
               flex items-center justify-center
             "
             >
-
               <div
                 className="
                 w-full h-full
@@ -146,7 +124,6 @@ export default function DashboardPage() {
                 items-center justify-center
               "
               >
-
                 <p
                   className="
                   text-5xl
@@ -164,12 +141,8 @@ export default function DashboardPage() {
                 <p className="text-gray-500 text-sm mt-2">
                   ATS SCORE
                 </p>
-
               </div>
-
             </div>
-
-
 
             <div
               className="
@@ -179,16 +152,10 @@ export default function DashboardPage() {
               text-sm
             "
             >
-
               <TrendingUp size={16} />
-
               Strong AI Resume Match
-
             </div>
-
           </div>
-
-
 
           {/* SKILLS FOUND */}
           <div
@@ -200,7 +167,6 @@ export default function DashboardPage() {
             p-6
           "
           >
-
             <h2
               className="
               text-2xl
@@ -212,16 +178,12 @@ export default function DashboardPage() {
               Skills Found
             </h2>
 
-
-
             <div className="flex flex-wrap gap-3">
-
               {atsData.skills_found?.map(
                 (
                   skill: string,
                   index: number
                 ) => (
-
                   <span
                     key={index}
                     className="
@@ -237,226 +199,12 @@ export default function DashboardPage() {
                   >
                     {skill}
                   </span>
-
                 )
               )}
-
             </div>
-
           </div>
-
         </div>
-
       )}
-
-
-
-      {/* MISSING SKILLS */}
-      {atsData && (
-
-        <div
-          className="
-          bg-[#050505]
-          border border-white/5
-          rounded-3xl
-          p-6
-          mt-6
-        "
-        >
-
-          <h2
-            className="
-            text-2xl
-            font-bold
-            text-white
-            mb-6
-          "
-          >
-            Missing Skills
-          </h2>
-
-
-
-          <div className="flex flex-wrap gap-3">
-
-            {atsData.missing_skills?.map(
-              (
-                skill: string,
-                index: number
-              ) => (
-
-                <span
-                  key={index}
-                  className="
-                  px-4 py-2
-                  rounded-xl
-                  bg-red-500/10
-                  border border-red-500/20
-                  text-red-400
-                  text-sm
-                  hover:bg-red-500/20
-                  transition-all duration-300
-                "
-                >
-                  {skill}
-                </span>
-
-              )
-            )}
-
-          </div>
-
-        </div>
-
-      )}
-
-
-
-      {/* AI SUGGESTIONS */}
-      {atsData && (
-
-        <div
-          className="
-          bg-[#050505]
-          border border-white/5
-          rounded-3xl
-          p-6
-          mt-6
-        "
-        >
-
-          <div className="flex items-center gap-3 mb-6">
-
-            <div
-              className="
-              w-12 h-12
-              rounded-2xl
-              bg-gradient-to-r
-              from-blue-500/10
-              to-purple-500/10
-              border border-blue-500/20
-              flex items-center justify-center
-            "
-            >
-
-              <Sparkles
-                size={22}
-                className="text-[#6EA8FF]"
-              />
-
-            </div>
-
-
-
-            <div>
-
-              <h2
-                className="
-                text-2xl
-                font-bold
-                text-white
-              "
-              >
-                AI Suggestions
-              </h2>
-
-              <p className="text-gray-500 text-sm">
-                Smart recommendations to improve ATS score
-              </p>
-
-            </div>
-
-          </div>
-
-
-
-          <div className="space-y-4">
-
-            {atsData.suggestions?.map(
-              (
-                item: string,
-                index: number
-              ) => (
-
-                <div
-                  key={index}
-                  className="
-                  relative
-                  overflow-hidden
-                  bg-black
-                  border border-white/5
-                  rounded-2xl
-                  p-5
-                  hover:border-purple-500/20
-                  transition-all duration-300
-                "
-                >
-
-                  {/* Glow Line */}
-                  <div
-                    className="
-                    absolute
-                    left-0 top-0
-                    h-full
-                    w-[4px]
-                    bg-gradient-to-b
-                    from-blue-500
-                    to-purple-500
-                  "
-                  />
-
-
-
-                  <div className="flex items-start gap-4">
-
-                    <div
-                      className="
-                      min-w-[42px]
-                      h-[42px]
-                      rounded-xl
-                      bg-gradient-to-r
-                      from-blue-500/10
-                      to-purple-500/10
-                      border border-blue-500/20
-                      flex items-center justify-center
-                    "
-                    >
-
-                      <Sparkles
-                        size={18}
-                        className="text-[#6EA8FF]"
-                      />
-
-                    </div>
-
-
-
-                    <div>
-
-                      <p
-                        className="
-                        text-gray-200
-                        leading-relaxed
-                      "
-                      >
-                        {item}
-                      </p>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              )
-            )}
-
-          </div>
-
-        </div>
-
-      )}
-
     </div>
   );
 }

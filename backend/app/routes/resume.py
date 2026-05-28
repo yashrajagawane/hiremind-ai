@@ -25,6 +25,10 @@ from app.services.groq_jd_analyzer import (
     analyze_resume_with_jd
 )
 
+from app.services.gemini_resume_review import (
+    generate_resume_review
+)
+
 router = APIRouter(
     prefix="/resume",
     tags=["Resume"]
@@ -266,6 +270,34 @@ async def ai_job_match(data: dict):
 
         LAST_RESUME_TEXT,
         job_description
+    )
+
+    return result
+
+
+# =========================
+# AI RESUME REVIEW
+# =========================
+@router.post("/resume-review")
+async def resume_review():
+
+    global LAST_RESUME_TEXT
+
+    # =========================
+    # VALIDATION
+    # =========================
+    if not LAST_RESUME_TEXT:
+
+        return {
+            "error":
+            "Please upload resume first"
+        }
+
+    # =========================
+    # AI REVIEW
+    # =========================
+    result = generate_resume_review(
+        LAST_RESUME_TEXT
     )
 
     return result

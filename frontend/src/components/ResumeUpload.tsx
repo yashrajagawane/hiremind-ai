@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-
 import axios from "axios";
 
 import {
@@ -11,14 +10,9 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
-
-
 interface ResumeUploadProps {
-
   setAtsData: (data: any) => void;
 }
-
-
 
 export default function ResumeUpload({
   setAtsData,
@@ -34,10 +28,10 @@ export default function ResumeUpload({
     useState("");
 
 
-
   // =========================
   // HANDLE FILE UPLOAD
   // =========================
+
   const handleFileChange = async (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -50,8 +44,6 @@ export default function ResumeUpload({
 
     setMessage("");
 
-
-
     try {
 
       setLoading(true);
@@ -63,11 +55,10 @@ export default function ResumeUpload({
         file
       );
 
-
-
       // =========================
       // API CALL
       // =========================
+
       const response = await axios.post(
         "http://127.0.0.1:8000/resume/upload",
         formData,
@@ -79,23 +70,19 @@ export default function ResumeUpload({
         }
       );
 
-
-
       // =========================
       // SET ATS DATA
       // =========================
+
       setAtsData(response.data);
-
-
 
       // =========================
       // SUCCESS MESSAGE
       // =========================
+
       setMessage(
         response.data.message
       );
-
-
 
     } catch (error: any) {
 
@@ -107,15 +94,11 @@ export default function ResumeUpload({
       );
 
     } finally {
-
       setLoading(false);
     }
   };
 
-
-
   return (
-
     <div
       className="
       bg-[#050505]
@@ -127,10 +110,10 @@ export default function ResumeUpload({
     >
 
       {/* HEADER */}
+
       <div className="flex items-center justify-between mb-5">
 
         <div>
-
           <h2 className="text-2xl font-bold text-white">
             Upload Resume
           </h2>
@@ -138,10 +121,7 @@ export default function ResumeUpload({
           <p className="text-gray-400 text-sm mt-1">
             Upload resumes for AI-powered ATS analysis
           </p>
-
         </div>
-
-
 
         <div
           className="
@@ -154,19 +134,15 @@ export default function ResumeUpload({
           flex items-center justify-center
         "
         >
-
           <UploadCloud
             size={24}
             className="text-[#6EA8FF]"
           />
-
         </div>
-
       </div>
 
-
-
       {/* DROP AREA */}
+
       <div
         className="
         border-2 border-dashed border-purple-500/20
@@ -180,6 +156,7 @@ export default function ResumeUpload({
       >
 
         {/* ICON */}
+
         <div className="flex justify-center mb-4">
 
           <div
@@ -195,7 +172,6 @@ export default function ResumeUpload({
           >
 
             {loading ? (
-
               <Loader2
                 size={30}
                 className="
@@ -203,23 +179,18 @@ export default function ResumeUpload({
                 animate-spin
               "
               />
-
             ) : (
-
               <UploadCloud
                 size={30}
                 className="text-[#6EA8FF]"
               />
-
             )}
 
           </div>
-
         </div>
 
-
-
         {/* TITLE */}
+
         <h3 className="text-2xl font-bold text-white mb-2">
           Upload Your Resume
         </h3>
@@ -228,9 +199,8 @@ export default function ResumeUpload({
           PDF and DOCX files supported
         </p>
 
-
-
         {/* CHOOSE FILE BUTTON */}
+
         <div className="flex justify-center">
 
           <label
@@ -255,24 +225,18 @@ export default function ResumeUpload({
               ? "Uploading..."
               : "Choose Resume"}
 
-
-
             <input
               type="file"
               accept=".pdf,.docx"
               className="hidden"
               onChange={handleFileChange}
             />
-
           </label>
-
         </div>
 
-
-
         {/* FILE NAME */}
-        {uploadedFileName && (
 
+        {uploadedFileName && (
           <div
             className="
             flex items-center justify-center gap-2
@@ -280,22 +244,17 @@ export default function ResumeUpload({
             text-[#C4B5FD]
           "
           >
-
             <FileText size={16} />
 
             <span className="text-sm">
               {uploadedFileName}
             </span>
-
           </div>
-
         )}
 
-
-
         {/* SUCCESS MESSAGE */}
-        {message && (
 
+        {message && (
           <div
             className="
             flex items-center justify-center gap-2
@@ -305,17 +264,12 @@ export default function ResumeUpload({
             font-medium
           "
           >
-
             <CheckCircle2 size={17} />
-
             {message}
-
           </div>
-
         )}
 
       </div>
-
     </div>
   );
 }

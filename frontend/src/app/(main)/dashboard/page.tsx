@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import StatCard from "@/components/StatCard";
 import ResumeUpload from "@/components/ResumeUpload";
@@ -14,17 +14,81 @@ import {
 } from "lucide-react";
 
 export default function DashboardPage() {
+
   const [atsData, setAtsData] =
     useState<any>(null);
 
+  // =========================
+  // LOAD SAVED DATA
+  // =========================
+  useEffect(() => {
+
+    const storedData =
+      localStorage.getItem(
+        "atsData"
+      );
+
+    if (storedData) {
+
+      setAtsData(
+        JSON.parse(storedData)
+      );
+
+    }
+
+  }, []);
+
+  // =========================
+  // SAVE DATA
+  // =========================
+  const handleSetAtsData = (
+    data: any
+  ) => {
+
+    setAtsData(data);
+
+    localStorage.setItem(
+      "atsData",
+      JSON.stringify(data)
+    );
+
+    // =========================
+    // SAVE REVIEW DATA
+    // =========================
+    localStorage.setItem(
+      "resumeReviewData",
+      JSON.stringify({
+
+        summary:
+          data.summary || "",
+
+        strengths:
+          data.strengths || [],
+
+        weaknesses:
+          data.weaknesses || [],
+
+        recommendations:
+          data.recommendations || [],
+
+        career_fit:
+          data.career_fit || [],
+      })
+    );
+  };
+
   return (
+
     <div>
+
       {/* UPLOAD */}
+
       <ResumeUpload
-        setAtsData={setAtsData}
+        setAtsData={handleSetAtsData}
       />
 
       {/* STATS */}
+
       <div
         className="
         grid grid-cols-1
@@ -34,9 +98,10 @@ export default function DashboardPage() {
         mt-8
       "
       >
+
         <StatCard
           title="Total Resumes"
-          value="1"
+          value={atsData ? "1" : "0"}
           icon={<FileText size={26} />}
         />
 
@@ -65,10 +130,13 @@ export default function DashboardPage() {
           }
           icon={<AlertTriangle size={26} />}
         />
+
       </div>
 
       {/* ATS ANALYTICS */}
+
       {atsData && (
+
         <div
           className="
           grid grid-cols-1
@@ -77,7 +145,9 @@ export default function DashboardPage() {
           mt-8
         "
         >
+
           {/* ATS SCORE */}
+
           <div
             className="
             bg-[#050505]
@@ -91,7 +161,7 @@ export default function DashboardPage() {
             overflow-hidden
           "
           >
-            {/* Glow */}
+
             <div
               className="
               absolute
@@ -115,6 +185,7 @@ export default function DashboardPage() {
               flex items-center justify-center
             "
             >
+
               <div
                 className="
                 w-full h-full
@@ -124,6 +195,7 @@ export default function DashboardPage() {
                 items-center justify-center
               "
               >
+
                 <p
                   className="
                   text-5xl
@@ -141,7 +213,9 @@ export default function DashboardPage() {
                 <p className="text-gray-500 text-sm mt-2">
                   ATS SCORE
                 </p>
+
               </div>
+
             </div>
 
             <div
@@ -152,12 +226,17 @@ export default function DashboardPage() {
               text-sm
             "
             >
+
               <TrendingUp size={16} />
+
               Strong AI Resume Match
+
             </div>
+
           </div>
 
           {/* SKILLS FOUND */}
+
           <div
             className="
             xl:col-span-2
@@ -167,6 +246,7 @@ export default function DashboardPage() {
             p-6
           "
           >
+
             <h2
               className="
               text-2xl
@@ -179,11 +259,13 @@ export default function DashboardPage() {
             </h2>
 
             <div className="flex flex-wrap gap-3">
+
               {atsData.skills_found?.map(
                 (
                   skill: string,
                   index: number
                 ) => (
+
                   <span
                     key={index}
                     className="
@@ -199,12 +281,18 @@ export default function DashboardPage() {
                   >
                     {skill}
                   </span>
+
                 )
               )}
+
             </div>
+
           </div>
+
         </div>
+
       )}
+
     </div>
   );
 }

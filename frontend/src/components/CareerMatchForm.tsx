@@ -251,63 +251,95 @@ export default function CareerMatchForm() {
       {result && (
         <>
           {/* Score */}
+        <div
+        className="
+        grid
+        md:grid-cols-2
+        gap-6
+        mb-6
+        "
+        >
 
-          <div
+        {/* Match Score */}
+
+        <div
             className="
             bg-[#050505]
             border border-white/5
             rounded-[28px]
-            p-10
-            text-center
-          "
-          >
+            p-8
+        "
+        >
             <p
-              className="
-              text-7xl
-              font-black
-              bg-gradient-to-r
-              from-blue-400
-              to-purple-500
-              bg-clip-text
-              text-transparent
+            className="
+            text-7xl
+            font-black
+            text-[#6EA8FF]
             "
             >
-              {result.match_score}%
+            {result.match_score}%
             </p>
 
             <p
-              className="
-              text-xl
-              text-gray-300
-              mt-2
+            className="
+            text-2xl
+            font-semibold
+            text-white
+            mt-3
             "
             >
-              Match Score
+            Match Score
             </p>
 
-            <div
-              className="
-              mt-4
-              inline-flex
-              items-center gap-2
-              px-4 py-2
-              rounded-full
-              bg-green-500/10
-              border border-green-500/20
+            <p
+            className="
+            text-gray-400
+            mt-1
             "
             >
-              <TrendingUp
-                size={18}
-                className="text-green-400"
-              />
+            Resume Compatibility
+            </p>
+        </div>
 
-              <span className="text-green-300">
-                {result.hiring_probability}
-                {" "}
-                Hiring Probability
-              </span>
-            </div>
-          </div>
+        {/* Hiring Probability */}
+
+        <div
+            className="
+            bg-[#050505]
+            border border-white/5
+            rounded-[28px]
+            p-8
+        "
+        >
+            <TrendingUp
+            size={30}
+            className="
+            text-[#6EA8FF]
+            mb-4
+            "
+            />
+
+            <h3
+            className="
+            text-4xl
+            font-bold
+            text-white
+            "
+            >
+            {result.hiring_probability}
+            </h3>
+
+            <p
+            className="
+            text-gray-500
+            mt-2
+            "
+            >
+            Hiring Probability
+            </p>
+        </div>
+
+        </div>
 
           {/* Skills */}
 
@@ -418,67 +450,116 @@ export default function CareerMatchForm() {
             </div>
           </div>
 
-          {/* Alternative Roles */}
+         {/* Alternative Roles */}
 
-          <div
+        <div
+        className="
+        bg-[#050505]
+        border border-white/5
+        rounded-[28px]
+        p-6
+        "
+        >
+        <div
             className="
-            bg-[#050505]
-            border border-white/5
-            rounded-[28px]
-            p-6
-          "
-          >
+            flex items-center
+            gap-3
+            mb-6
+        "
+        >
             <div
-              className="
-              flex items-center
-              gap-3
-              mb-5
+            className="
+            w-12 h-12
+            rounded-xl
+            bg-gradient-to-br
+            from-blue-500/10
+            to-purple-500/10
+            border border-blue-500/20
+            flex items-center
+            justify-center
             "
             >
-              <Briefcase
-                className="
-                text-[#6EA8FF]
-              "
-              />
+            <Briefcase
+                size={22}
+                className="text-[#6EA8FF]"
+            />
+            </div>
 
-              <h3
+            <div>
+            <h3
                 className="
                 text-2xl
                 font-bold
                 text-white
-              "
-              >
-                Alternative Roles
-              </h3>
-            </div>
-
-            <div
-              className="
-              flex flex-wrap
-              gap-3
             "
             >
-              {result.alternative_roles?.map(
-                (
-                  role: string,
-                  index: number
-                ) => (
-                  <div
-                    key={index}
-                    className="
-                    px-4 py-2
-                    rounded-xl
-                    border border-blue-500/20
-                    bg-blue-500/10
-                    text-[#8BB8FF]
-                  "
-                  >
-                    {role}
-                  </div>
-                )
-              )}
+                Alternative Roles
+            </h3>
+
+            <p
+                className="
+                text-gray-500
+                text-sm
+                mt-1
+            "
+            >
+                Roles that align well with your
+                current skill profile
+            </p>
             </div>
-          </div>
+        </div>
+
+        <div
+            className="
+            grid
+            md:grid-cols-2
+            xl:grid-cols-4
+            gap-4
+        "
+        >
+            {result.alternative_roles?.map(
+            (
+                role: string,
+                index: number
+            ) => (
+                <div
+                key={index}
+                className="
+                rounded-2xl
+                border border-white/5
+                bg-gradient-to-br
+                from-blue-500/10
+                to-purple-500/10
+                p-5
+                hover:border-blue-500/30
+                hover:scale-[1.02]
+                transition-all
+                duration-300
+                cursor-default
+                "
+                >
+                <Briefcase
+                    size={18}
+                    className="
+                    text-[#6EA8FF]
+                    mb-3
+                "
+                />
+
+                <p
+                    className="
+                    text-white
+                    font-medium
+                    leading-6
+                "
+                >
+                    {role}
+                </p>
+                </div>
+            )
+            )}
+        </div>
+        </div>
         </>
       )}
     </div>

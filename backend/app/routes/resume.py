@@ -29,6 +29,10 @@ from app.services.gemini_resume_review import (
     generate_resume_review
 )
 
+from app.services.gemini_career_match import (
+    generate_career_match
+)
+
 router = APIRouter(
     prefix="/resume",
     tags=["Resume"]
@@ -298,6 +302,61 @@ async def resume_review():
     # =========================
     result = generate_resume_review(
         LAST_RESUME_TEXT
+    )
+
+    return result
+
+
+# =========================
+# AI CAREER MATCH
+# =========================
+@router.post("/career-match")
+async def career_match(data: dict):
+
+    global LAST_RESUME_TEXT
+
+    # =========================
+    # VALIDATION
+    # =========================
+    if not LAST_RESUME_TEXT:
+
+        return {
+            "error":
+            "Please upload resume first"
+        }
+
+    target_role = data.get(
+        "target_role",
+        ""
+    )
+
+    experience_level = data.get(
+        "experience_level",
+        ""
+    )
+
+    if not target_role:
+
+        return {
+            "error":
+            "target_role is required"
+        }
+
+    if not experience_level:
+
+        return {
+            "error":
+            "experience_level is required"
+        }
+
+    # =========================
+    # AI CAREER ANALYSIS
+    # =========================
+    result = generate_career_match(
+
+        LAST_RESUME_TEXT,
+        target_role,
+        experience_level
     )
 
     return result

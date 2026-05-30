@@ -214,18 +214,23 @@ export default function CareerMatchForm() {
             loading
           }
           className="
-          mt-6
-          w-full
-          rounded-xl
-          py-4
-          font-semibold
-          text-white
-          bg-gradient-to-r
-          from-blue-600
-          to-purple-600
-          hover:opacity-90
-          disabled:opacity-50
-        "
+            mt-6
+            w-full
+            rounded-2xl
+            py-4
+            font-semibold
+            text-white
+            bg-gradient-to-r
+            from-blue-600
+            via-blue-500
+            to-purple-600
+            hover:scale-[1.01]
+            transition-all
+            duration-300
+            disabled:opacity-50
+            disabled:hover:scale-100
+            shadow-[0_0_25px_rgba(59,130,246,0.20)]
+            "
         >
           {loading ? (
             <div

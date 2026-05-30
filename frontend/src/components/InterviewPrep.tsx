@@ -225,7 +225,7 @@ export default function InterviewPrep() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 gap-x-8 gap-y-5">
           <div>
             <label className="text-sm text-gray-400 block mb-2">
               Target Role

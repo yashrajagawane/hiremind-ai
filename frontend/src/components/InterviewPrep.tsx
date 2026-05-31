@@ -376,25 +376,54 @@ export default function InterviewPrep() {
 
       {result && (
         <>
-          <div className="flex justify-end">
-            <button
-              onClick={
-                downloadPDF
-              }
-              className="
-              flex items-center
-              gap-2
-              px-5 py-3
-              rounded-xl
-              bg-blue-500/10
-              border border-blue-500/20
-              text-[#8BB8FF]
-            "
-            >
-              <Download size={18} />
-              Download PDF
-            </button>
-          </div>
+        <div
+    style={{
+        marginTop: "20px",
+        marginBottom: "20px",
+    }}
+>
+    <button
+        onClick={downloadPDF}
+        style={{
+            background:
+            "linear-gradient(135deg, rgba(239,68,68,0.22), rgba(220,38,38,0.18))",
+
+            padding: "14px 28px",
+
+            borderRadius: "18px",
+
+            color: "rgba(255,255,255,0.95)",
+
+            display: "inline-flex",
+
+            alignItems: "center",
+
+            gap: "14px",
+
+            fontSize: "16px",
+
+            fontWeight: 600,
+
+            border:
+            "1px solid rgba(255,255,255,0.04)",
+
+            cursor: "pointer",
+
+            boxShadow:
+            "0 6px 20px rgba(239,68,68,0.04)",
+
+            backdropFilter:
+            "blur(18px)",
+
+            transition:
+            "all .25s ease",
+        }}
+    >
+        <Download size={20} />
+
+        Export PDF
+    </button>
+</div>
 
           <div className="grid lg:grid-cols-3 gap-6">
             <QuestionCard

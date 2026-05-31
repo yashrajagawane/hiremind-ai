@@ -37,6 +37,10 @@ from app.services.gemini_interview_prep import (
     generate_interview_prep
 )
 
+from app.services.gemini_career_analytics import (
+    generate_career_analytics
+)
+
 router = APIRouter(
     prefix="/resume",
     tags=["Resume"]
@@ -53,7 +57,7 @@ os.makedirs(
 # TEMP RESUME STORAGE
 # =========================
 LAST_RESUME_TEXT = ""
-
+LAST_CAREER_ANALYTICS = {}
 
 # =========================
 # UPLOAD RESUME
@@ -64,6 +68,7 @@ async def upload_resume(
 ):
 
     global LAST_RESUME_TEXT
+    global LAST_CAREER_ANALYTICS
 
     # =========================
     # SAVE FILE
@@ -170,6 +175,16 @@ async def upload_resume(
     recommendations = ai_analysis.get(
         "recommendations",
         []
+    )
+
+    # =========================
+    # CAREER ANALYTICS
+    # =========================
+
+    LAST_CAREER_ANALYTICS = (
+        generate_career_analytics(
+            extracted_text
+        )
     )
 
     # =========================
@@ -418,3 +433,20 @@ async def interview_prep(data: dict):
     )
 
     return result
+
+# =========================
+# AI CAREER ANALYTICS
+# =========================
+@router.get("/career-analytics")
+async def career_analytics():
+
+    global LAST_CAREER_ANALYTICS
+
+    if not LAST_CAREER_ANALYTICS:
+
+        return {
+            "error":
+            "Please upload resume first"
+        }
+
+    return LAST_CAREER_ANALYTICS

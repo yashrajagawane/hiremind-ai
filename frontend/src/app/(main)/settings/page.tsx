@@ -1,8 +1,5 @@
-export default function SettingsPage() {
+import SettingsPage from "../../../components/SettingsPage";
 
-  return (
-
-    <div className="text-white p-8">
-    </div>
-  );
+export default function Page() {
+  return <SettingsPage />;
 }

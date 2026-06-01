@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 import Sidebar from "@/components/Sidebar";
 import Topbar from "@/components/Topbar";
@@ -11,6 +12,8 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
 
+  const router = useRouter();
+
   const [collapsed, setCollapsed] =
     useState(false);
 
@@ -18,6 +21,16 @@ export default function MainLayout({
     useState<any>(null);
 
   useEffect(() => {
+
+    const token =
+      localStorage.getItem("token");
+
+    if (!token) {
+
+      router.push("/login");
+      return;
+
+    }
 
     const storedUser =
       localStorage.getItem("user");
@@ -30,7 +43,7 @@ export default function MainLayout({
 
     }
 
-  }, []);
+  }, [router]);
 
   return (
 

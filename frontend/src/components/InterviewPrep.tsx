@@ -214,7 +214,7 @@ export default function InterviewPrep() {
               text-white
             "
             >
-              AI Interview Prep
+              Interview Prep
             </h2>
 
             <p className="text-gray-400 mt-1">
@@ -342,37 +342,6 @@ export default function InterviewPrep() {
           )}
         </button>
       </div>
-
-      {!result && (
-        <div
-          className="
-          bg-[#050505]
-          border border-white/5
-          rounded-[28px]
-          p-10
-          text-center
-        "
-        >
-          <Sparkles
-            size={40}
-            className="
-            mx-auto
-            text-[#6EA8FF]
-            mb-4
-          "
-          />
-
-          <h3 className="text-2xl text-white font-bold">
-            Ready For Interview Prep
-          </h3>
-
-          <p className="text-gray-500 mt-3">
-            Generate personalized
-            interview questions based
-            on your resume.
-          </p>
-        </div>
-      )}
 
       {result && (
         <>

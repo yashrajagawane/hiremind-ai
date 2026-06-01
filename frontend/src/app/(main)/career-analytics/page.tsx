@@ -1,9 +1,5 @@
+import CareerAnalytics from "@/components/CareerAnalytics";
+
 export default function CareerAnalyticsPage() {
-
-  return (
-
-    <div className="text-white p-8">
-
-    </div>
-  );
+  return <CareerAnalytics />;
 }

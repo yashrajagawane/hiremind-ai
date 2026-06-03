@@ -1,9 +1,9 @@
 from pydantic import BaseModel
 
 
-# =========================
+# ================
 # SIGNUP SCHEMA
-# =========================
+# ================
 class UserCreate(BaseModel):
     full_name: str
     email: str

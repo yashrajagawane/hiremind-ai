@@ -95,9 +95,6 @@ def generate_ai_insights(data):
             "Project count is low"
         )
 
-    # =========================
-    # RECOMMENDATIONS
-    # =========================
     recommendations.append(
         "Add measurable project achievements"
     )
@@ -122,9 +119,9 @@ def generate_ai_insights(data):
     # =========================
     domain = detect_domain(skills)
 
-    # =========================
+    # ===========================
     # AI SUMMARY
-    # =========================
+    # ===========================
     summary = (
         f"Candidate is suited for {domain} roles "
         f"with an ATS score of {ats_score}%."

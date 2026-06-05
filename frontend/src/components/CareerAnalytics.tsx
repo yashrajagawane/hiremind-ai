@@ -24,7 +24,7 @@ export default function CareerAnalytics() {
       try {
         const response =
           await axios.get(
-            "http://127.0.0.1:8000/resume/career-analytics"
+            "https://hiremind-ai-3j1y.onrender.com/resume/career-analytics"
           );
 
         setData(

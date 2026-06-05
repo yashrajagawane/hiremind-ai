@@ -53,7 +53,7 @@ export default function CareerMatchForm() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/resume/career-match",
+        "https://hiremind-ai-3j1y.onrender.com/resume/career-match",
         {
           target_role: targetRole,
           experience_level: experienceLevel,

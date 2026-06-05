@@ -56,7 +56,7 @@ export default function InterviewPrep() {
 
         const response =
           await axios.post(
-            "http://127.0.0.1:8000/resume/interview-prep",
+            "https://hiremind-ai-3j1y.onrender.com/resume/interview-prep",
             {
               target_role:
                 targetRole,

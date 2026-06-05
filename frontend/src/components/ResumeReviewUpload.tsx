@@ -71,7 +71,7 @@ export default function ResumeReviewUpload({
 
       await axios.post(
 
-        "http://127.0.0.1:8000/resume/upload",
+        "https://hiremind-ai-3j1y.onrender.com/resume/upload",
 
         formData,
 

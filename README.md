@@ -1,112 +1,81 @@
 <div align="center">
 
-# 🚀 HireMind AI
+# ██╗  ██╗██╗██████╗ ███████╗███╗   ███╗██╗███╗   ██╗██████╗
+# ██║  ██║██║██╔══██╗██╔════╝████╗ ████║██║████╗  ██║██╔══██╗
+# ███████║██║██████╔╝█████╗  ██╔████╔██║██║██╔██╗ ██║██║  ██║
+# ██╔══██║██║██╔══██╗██╔══╝  ██║╚██╔╝██║██║██║╚██╗██║██║  ██║
+# ██║  ██║██║██║  ██║███████╗██║ ╚═╝ ██║██║██║ ╚████║██████╔╝
+# ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═════╝
 
-### **AI-Powered Resume Screening, Career Analytics & Interview Intelligence Platform**
+### 🤖 AI-Powered Resume Intelligence Platform
 
 <p align="center">
-Transform resumes into opportunities using AI-driven resume analysis, ATS optimization, intelligent job matching, career insights, and interview preparation.
+Transforming Resume Screening, Career Development and Interview Preparation through Artificial Intelligence.
 </p>
 
 <br>
 
-<p align="center">
-  <a href="https://hiremind-ai-seven.vercel.app">
-    <img src="https://img.shields.io/badge/🌐_Live_Demo-Visit_Platform-6366F1?style=for-the-badge" />
-  </a>
-
-  <a href="https://github.com/yashrajagawane/hiremind-ai">
-    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" />
-  </a>
-</p>
-
-<br>
-
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=28&duration=2500&pause=1200&color=A78BFA&center=true&vCenter=true&width=1000&lines=AI-Powered+Resume+Analysis;Advanced+ATS+Optimization;Intelligent+Career+Analytics;AI+Job+Matching+Engine;Interview+Preparation+Assistant;Built+with+Next.js+%2B+FastAPI" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=26&duration=3000&color=A855F7&center=true&vCenter=true&width=1000&lines=AI-Powered+Resume+Intelligence+Platform;Advanced+ATS+Resume+Analysis;Career+Analytics+Engine;AI+Job+Matching+System;Interview+Preparation+Assistant;Built+with+Next.js+%2B+FastAPI+%2B+Machine+Learning" />
 
 <br><br>
 
----
-
-## ⚡ Platform Highlights
-
-<table>
-<tr>
-<td align="center" width="25%">
-
-### 📄
-
-**Resume Review**
-
-AI-driven resume analysis with actionable recommendations.
-
-</td>
-
-<td align="center" width="25%">
-
-### 🎯
-
-**Job Matching**
-
-Match resumes against opportunities using intelligent scoring.
-
-</td>
-
-<td align="center" width="25%">
-
-### 📊
-
-**Career Analytics**
-
-Discover strengths, weaknesses, and growth opportunities.
-
-</td>
-
-<td align="center" width="25%">
-
-### 🎤
-
-**Interview Prep**
-
-Generate tailored interview preparation insights.
-
-</td>
-
-</tr>
-</table>
-
----
-
-## 🛠️ Built With
-
 <p align="center">
 
-<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>
+<img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge"/>
 
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+<img src="https://img.shields.io/badge/Frontend-Vercel-black?style=for-the-badge"/>
 
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge"/>
 
-<img src="https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
+<img src="https://img.shields.io/badge/AI-Resume%20Intelligence-8B5CF6?style=for-the-badge"/>
 
-<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-
-<img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white"/>
-
-<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel"/>
-
-<img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Architecture-Full%20Stack-blue?style=for-the-badge"/>
 
 </p>
 
----
+<br>
 
 <p align="center">
-
-<img src="https://komarev.com/ghpvc/?username=yashrajagawane&label=Project%20Views&color=8b5cf6&style=for-the-badge"/>
-
+<a href="https://hiremind-ai-seven.vercel.app">
+<img src="https://img.shields.io/badge/🚀%20Launch%20HireMind%20AI-Live%20Demo-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white"/>
+</a>
 </p>
 
 </div>
+
+---
+
+# 🧠 About HireMind AI
+
+**HireMind AI** is an advanced AI-powered recruitment intelligence platform designed to help students, job seekers, recruiters, and organizations make smarter career decisions through data-driven insights.
+
+The platform goes beyond traditional resume screening by combining:
+
+- 📄 Intelligent Resume Analysis
+- 🎯 AI-Based Job Matching
+- 📊 Career Growth Analytics
+- 🤖 ATS Compatibility Evaluation
+- 🎤 Interview Preparation Assistance
+- 🧠 Skill Gap Identification
+
+Instead of manually reviewing resumes and guessing career opportunities, HireMind AI leverages Artificial Intelligence to transform career development into a structured and intelligent process.
+
+Whether you are a student preparing for placements, a professional seeking better opportunities, or a recruiter looking for efficient candidate evaluation, HireMind AI provides actionable insights that accelerate decision-making.
+
+---
+
+## 🌟 Vision
+
+To build a next-generation AI career ecosystem where every candidate receives personalized career guidance, intelligent resume evaluation, and data-backed recommendations to maximize professional success.
+
+---
+
+## 🎯 Core Mission
+
+Empower individuals and organizations by making recruitment, career planning, and interview preparation smarter, faster, and more accessible through Artificial Intelligence.
+
+---
+
+<p align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=8B5CF6&height=120&section=footer"/>
+</p>

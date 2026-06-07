@@ -39,6 +39,8 @@ Transforming Resume Screening, Career Development and Interview Preparation thro
 
 </div>
 
+---
+
 # 🧠 About HireMind AI
  
 <div align="center">

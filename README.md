@@ -10,12 +10,17 @@
 ```
 
 ### 🤖 AI-Powered Resume Intelligence Platform
+
 <p align="center">
 Transforming Resume Screening, Career Development and Interview Preparation through Artificial Intelligence.
 </p>
+
 <br>
+
 <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=26&duration=3000&color=A855F7&center=true&vCenter=true&width=1000&lines=AI-Powered+Resume+Intelligence+Platform;Advanced+ATS+Resume+Analysis;Career+Analytics+Engine;AI+Job+Matching+System;Interview+Preparation+Assistant;Built+with+Next.js+%2B+FastAPI+%2B+Machine+Learning" />
+
 <br><br>
+
 <p align="center">
 <img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/Frontend-Vercel-black?style=for-the-badge"/>
@@ -23,12 +28,15 @@ Transforming Resume Screening, Career Development and Interview Preparation thro
 <img src="https://img.shields.io/badge/AI-Resume%20Intelligence-8B5CF6?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/Architecture-Full%20Stack-blue?style=for-the-badge"/>
 </p>
+
 <br>
+
 <p align="center">
 <a href="https://hiremind-ai-seven.vercel.app">
 <img src="https://img.shields.io/badge/🚀%20Launch%20HireMind%20AI-Live%20Demo-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white"/>
 </a>
 </p>
+
 </div>
 
 ---
@@ -64,117 +72,90 @@ Empower individuals and organizations by making recruitment, career planning, an
 
 ---
 
-<p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=8B5CF6&height=120&section=footer"/>
-</p>
-
-
-
-
-
----
-
 # 🚀 Why HireMind AI Exists
 
 Modern recruitment and career development processes are still heavily dependent on manual evaluation, subjective decision-making, and fragmented tools.
 
 Both recruiters and job seekers face significant challenges:
 
-### For Recruiters
+## ❌ The Problem
 
-❌ Thousands of resumes to review manually
+<table>
+<tr>
+<td width="50%">
 
-❌ Difficulty identifying qualified candidates
+### 👔 For Recruiters
 
-❌ Inefficient resume filtering processes
+- Thousands of resumes to review manually
+- Difficulty identifying qualified candidates
+- Inefficient resume filtering processes
+- Lack of intelligent candidate ranking
+- Time-consuming hiring workflows
 
-❌ Lack of intelligent candidate ranking
+</td>
+<td width="50%">
 
-❌ Time-consuming hiring workflows
+### 🎓 For Students & Professionals
 
----
+- ATS rejections despite strong qualifications
+- Unclear career growth direction
+- Poor understanding of industry requirements
+- Lack of personalized interview preparation
+- Difficulty matching skills with job opportunities
 
-### For Students & Professionals
+</td>
+</tr>
+</table>
 
-❌ ATS rejections despite strong qualifications
+## ✅ HireMind AI Solves This
 
-❌ Unclear career growth direction
-
-❌ Poor understanding of industry requirements
-
-❌ Lack of personalized interview preparation
-
-❌ Difficulty matching skills with job opportunities
-
----
-
-### HireMind AI Solves This By Combining
-
-✅ Resume Intelligence
-
-✅ ATS Optimization
-
-✅ AI-Powered Job Matching
-
-✅ Career Analytics
-
-✅ Interview Preparation
-
-✅ Intelligent Recommendations
-
-into one unified ecosystem.
+> One unified ecosystem combining **Resume Intelligence** · **ATS Optimization** · **AI Job Matching** · **Career Analytics** · **Interview Preparation** · **Intelligent Recommendations**
 
 ---
 
 # 🏗️ Platform Architecture
 
-```text
-                         ┌─────────────────────┐
-                         │      USER INPUT     │
-                         └──────────┬──────────┘
-                                    │
-                                    ▼
-                    ┌─────────────────────────────┐
-                    │      Resume Upload Hub      │
-                    └──────────┬──────────────────┘
-                               │
-                               ▼
-                ┌───────────────────────────────┐
-                │     AI Resume Intelligence    │
-                └──────────┬─────────┬──────────┘
-                           │         │
-                           │         │
-             ┌─────────────┘         └─────────────┐
-             ▼                                     ▼
-
-     ATS Compatibility                    Skill Extraction
-         Analysis                           & Parsing
-
-             │                                     │
-             └─────────────┬───────────────────────┘
+```
+╔══════════════════════════════════════════════════════════╗
+║                       USER INPUT                        ║
+╚═══════════════════════════╦══════════════════════════════╝
+                            ║
+                            ▼
+╔══════════════════════════════════════════════════════════╗
+║                  Resume Upload Hub                       ║
+╚═══════════════════════════╦══════════════════════════════╝
+                            ║
+                            ▼
+╔══════════════════════════════════════════════════════════╗
+║              AI Resume Intelligence Engine               ║
+╚═══════════════╦═══════════════════════════╦══════════════╝
+                ║                           ║
+                ▼                           ▼
+╔═══════════════════════╗       ╔═══════════════════════════╗
+║   ATS Compatibility   ║       ║   Skill Extraction        ║
+║       Analysis        ║       ║      & Parsing            ║
+╚═══════════╦═══════════╝       ╚══════════════╦════════════╝
+            ║                                  ║
+            ╚══════════════╦═══════════════════╝
                            ▼
-
-                ┌───────────────────────────────┐
-                │      Job Match Engine         │
-                └──────────┬────────────────────┘
-                           │
-                           ▼
-
-                ┌───────────────────────────────┐
-                │     Career Analytics Hub      │
-                └──────────┬────────────────────┘
-                           │
-                           ▼
-
-                ┌───────────────────────────────┐
-                │    Interview Preparation AI   │
-                └──────────┬────────────────────┘
-                           │
-                           ▼
-
-                ┌───────────────────────────────┐
-                │  Intelligent Career Insights  │
-                └───────────────────────────────┘
+╔══════════════════════════════════════════════════════════╗
+║                   Job Match Engine                       ║
+╚═══════════════════════════╦══════════════════════════════╝
+                            ║
+                            ▼
+╔══════════════════════════════════════════════════════════╗
+║                Career Analytics Hub                      ║
+╚═══════════════════════════╦══════════════════════════════╝
+                            ║
+                            ▼
+╔══════════════════════════════════════════════════════════╗
+║              Interview Preparation AI                    ║
+╚═══════════════════════════╦══════════════════════════════╝
+                            ║
+                            ▼
+╔══════════════════════════════════════════════════════════╗
+║              Intelligent Career Insights                 ║
+╚══════════════════════════════════════════════════════════╝
 ```
 
 ---
@@ -185,18 +166,16 @@ into one unified ecosystem.
 
 The Resume Intelligence Engine acts as the foundation of HireMind AI.
 
-### Capabilities
+| Capability | Description |
+|------------|-------------|
+| 🔍 ATS Resume Evaluation | Score and optimize resumes for ATS systems |
+| 📑 Resume Parsing | Extract structured data from raw documents |
+| 🧠 Skill Identification | Detect and categorize technical & soft skills |
+| 🔑 Keyword Extraction | Surface industry-relevant keywords automatically |
+| ✏️ Improvement Suggestions | AI-powered recommendations for resume enhancement |
+| 👤 Candidate Profiling | Build comprehensive candidate intelligence profiles |
 
-- ATS Resume Evaluation
-- Resume Parsing
-- Skill Identification
-- Keyword Extraction
-- Resume Improvement Suggestions
-- Candidate Profiling
-
-### Outcome
-
-Transforms raw resumes into structured intelligence that can be analyzed and optimized for hiring success.
+> **Outcome:** Transforms raw resumes into structured intelligence that can be analyzed and optimized for hiring success.
 
 ---
 
@@ -204,17 +183,15 @@ Transforms raw resumes into structured intelligence that can be analyzed and opt
 
 The Job Matching Engine compares candidate profiles against job requirements and identifies the most relevant opportunities.
 
-### Capabilities
+| Capability | Description |
+|------------|-------------|
+| 📋 Resume vs JD Matching | Deep semantic comparison of resume against job descriptions |
+| 📊 Similarity Score | Quantified compatibility score for every opportunity |
+| 🔍 Skill Gap Detection | Identify missing skills for target roles |
+| 💡 Role Recommendation | AI-suggested roles based on candidate profile |
+| 📈 Match Percentage Analysis | Granular breakdown of match quality |
 
-- Resume vs Job Description Matching
-- Similarity Score Calculation
-- Skill Gap Detection
-- Role Recommendation
-- Match Percentage Analysis
-
-### Outcome
-
-Helps users discover opportunities aligned with their skills and career goals.
+> **Outcome:** Helps users discover opportunities aligned with their skills and career goals.
 
 ---
 
@@ -222,17 +199,15 @@ Helps users discover opportunities aligned with their skills and career goals.
 
 The Career Analytics Module converts career data into actionable insights.
 
-### Capabilities
+| Capability | Description |
+|------------|-------------|
+| 📈 Performance Insights | Measure career strength across dimensions |
+| 🛤️ Career Progress Tracking | Visualize growth trajectory over time |
+| 🧪 Skill Growth Analysis | Track skill development and market demand |
+| 🏭 Industry Alignment | Evaluate fit with target industry standards |
+| 🎯 Career Readiness | Holistic readiness score for next career move |
 
-- Performance Insights
-- Career Progress Tracking
-- Skill Growth Analysis
-- Industry Alignment Evaluation
-- Career Readiness Assessment
-
-### Outcome
-
-Provides users with data-driven recommendations for professional growth.
+> **Outcome:** Provides users with data-driven recommendations for professional growth.
 
 ---
 
@@ -240,132 +215,145 @@ Provides users with data-driven recommendations for professional growth.
 
 The Interview Preparation Module helps candidates prepare effectively for technical and behavioral interviews.
 
-### Capabilities
+| Capability | Description |
+|------------|-------------|
+| 🗣️ Interview Guidance | Role-specific preparation strategies |
+| 📚 Preparation Recommendations | Curated resources tailored to the target role |
+| 🧪 Skill Assessment | Identify and strengthen weak preparation areas |
+| 💪 Confidence Building | Practice frameworks to reduce interview anxiety |
+| ✅ Career Readiness Evaluation | Final readiness check before interview day |
 
-- Interview Guidance
-- Preparation Recommendations
-- Skill Assessment Support
-- Confidence Building
-- Career Readiness Evaluation
-
-### Outcome
-
-Improves interview readiness and increases candidate confidence.
+> **Outcome:** Improves interview readiness and increases candidate confidence.
 
 ---
 
 # 🌟 Feature Matrix
 
-| Module | Functionality | Business Value |
-|----------|-------------|-------------|
-| 📄 Resume Review | AI Resume Analysis | Better Resume Quality |
-| 🎯 Job Match | Resume-JD Matching | Relevant Opportunities |
-| 📊 Career Analytics | Career Intelligence | Growth Planning |
-| 🎤 Interview Prep | Preparation Assistance | Interview Readiness |
-| 🤖 ATS Evaluation | Compatibility Analysis | Improved Visibility |
-| 📈 Dashboard | Unified Workspace | Better User Experience |
+| Module | Core Functionality | Key Benefit | Target User |
+|--------|-------------------|-------------|-------------|
+| 📄 Resume Intelligence | AI Resume Analysis & Parsing | Higher Quality Resumes | Students · Professionals |
+| 🎯 Job Matching | Resume–JD Semantic Matching | Relevant Opportunities Faster | Job Seekers |
+| 📊 Career Analytics | Data-Driven Career Intelligence | Strategic Growth Planning | All Users |
+| 🎤 Interview Prep | Personalized Preparation Assistant | Better Interview Performance | Candidates |
+| 🤖 ATS Evaluation | Compatibility Scoring & Fixes | Improved ATS Pass Rate | Job Seekers |
+| 📈 Dashboard | Unified Career Workspace | Streamlined User Experience | All Users |
 
 ---
 
 # 🎬 Product Workflow
 
-```text
-┌─────────────────┐
-│ Upload Resume   │
-└────────┬────────┘
-         │
-         ▼
-
-┌─────────────────┐
-│ AI Analysis     │
-└────────┬────────┘
-         │
-         ▼
-
-┌─────────────────┐
-│ ATS Evaluation  │
-└────────┬────────┘
-         │
-         ▼
-
-┌─────────────────┐
-│ Job Matching    │
-└────────┬────────┘
-         │
-         ▼
-
-┌─────────────────┐
-│ Career Insights │
-└────────┬────────┘
-         │
-         ▼
-
-┌─────────────────┐
-│ Interview Prep  │
-└────────┬────────┘
-         │
-         ▼
-
-┌─────────────────┐
-│ Professional    │
-│ Growth          │
-└─────────────────┘
+```
+  ┌──────────────────┐
+  │  📤 Upload Resume │
+  └────────┬─────────┘
+           │
+           ▼
+  ┌──────────────────┐
+  │  🧠 AI Analysis   │  ← NLP · Skill Extraction · ATS Scoring
+  └────────┬─────────┘
+           │
+           ▼
+  ┌──────────────────┐
+  │  🤖 ATS Check    │  ← Keyword Gap · Format Issues · Score
+  └────────┬─────────┘
+           │
+           ▼
+  ┌──────────────────┐
+  │  🎯 Job Matching  │  ← Semantic Match · Role Fit · Gap Analysis
+  └────────┬─────────┘
+           │
+           ▼
+  ┌──────────────────┐
+  │  📊 Career Insights│ ← Progress · Industry Fit · Recommendations
+  └────────┬─────────┘
+           │
+           ▼
+  ┌──────────────────┐
+  │  🎤 Interview Prep│ ← Guided Prep · Confidence Score
+  └────────┬─────────┘
+           │
+           ▼
+  ┌──────────────────┐
+  │  🚀 Career Growth │
+  └──────────────────┘
 ```
 
 ---
 
 # 💡 What Makes HireMind AI Different
 
-Unlike traditional resume tools that focus on only one aspect of career development, HireMind AI delivers an integrated intelligence platform.
+Unlike traditional resume tools that focus on only one aspect of career development, HireMind AI delivers an **integrated intelligence platform**.
 
-### Competitive Advantages
+<table>
+<tr>
+<td width="50%">
 
-✅ End-to-End Career Ecosystem
+### 🏆 Competitive Advantages
 
-✅ AI-Powered Resume Intelligence
+✅ End-to-End Career Ecosystem  
+✅ AI-Powered Resume Intelligence  
+✅ ATS Compatibility Evaluation  
+✅ Intelligent Job Matching  
+✅ Career Growth Analytics  
+✅ Interview Preparation Assistance  
 
-✅ ATS Compatibility Evaluation
+</td>
+<td width="50%">
 
-✅ Intelligent Job Matching
+### 🔧 Technical Strengths
 
-✅ Career Growth Analytics
+✅ Modern Full-Stack Architecture  
+✅ Scalable Cloud Infrastructure  
+✅ Recruiter & Candidate Focused Design  
+✅ Real-World Industry Use Cases  
+✅ Next.js + FastAPI + ML Stack  
+✅ Vercel + Render Deployment  
 
-✅ Interview Preparation Assistance
-
-✅ Modern Full-Stack Architecture
-
-✅ Scalable Cloud Infrastructure
-
-✅ Recruiter & Candidate Focused Design
-
-✅ Real-World Industry Use Cases
+</td>
+</tr>
+</table>
 
 ---
 
 # 📌 Business Impact
 
-### For Students
+<table>
+<tr>
+<td width="33%">
+
+### 🎓 For Students
 
 - Better placement preparation
 - Improved resume quality
 - Career growth insights
 - Interview readiness
 
-### For Job Seekers
+</td>
+<td width="33%">
+
+### 💼 For Job Seekers
 
 - Faster opportunity discovery
 - Improved ATS performance
 - Skill gap awareness
 - Smarter career decisions
 
-### For Recruiters
+</td>
+<td width="33%">
+
+### 🏢 For Recruiters
 
 - Faster candidate evaluation
 - Efficient resume screening
 - Better hiring decisions
 - Reduced recruitment effort
 
+</td>
+</tr>
+</table>
+
 ---
 
-
-
+<p align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=8B5CF6&height=120&section=footer"/>
+</p>

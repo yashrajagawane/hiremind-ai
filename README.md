@@ -549,13 +549,6 @@ app/
 
 
 
-
-
-
-
-
-
-
 # 🎬 Product Showcase
 
 <div align="center">
@@ -652,37 +645,6 @@ app/
 </tr>
 </table>
 
----
-
-# 🔥 Why HireMind AI?
-
-<div align="center">
-
-| ❌ Traditional Process | ✅ HireMind AI |
-|----------------------|----------------|
-| Manual resume review | AI-powered instant analysis |
-| Generic one-size feedback | Personalized actionable insights |
-| Hours of screening | Near real-time evaluation |
-| Guess-based career moves | Data-driven intelligence |
-| Fragmented tools | One unified career ecosystem |
-
-</div>
-
----
-
-# ✨ Capability Overview
-
-<div align="center">
-
-| Module | Powered By | Output |
-|--------|-----------|--------|
-| 📄 Resume Intelligence | Gemini AI + NLP | Score · Gaps · Fixes |
-| 🤖 ATS Evaluation | Groq AI | Pass Rate · Keywords |
-| 🎯 Job Matching | Semantic Engine | Fit % · Role Fit |
-| 📊 Career Analytics | AI Insights | Growth · Readiness |
-| 🎤 Interview Prep | Gemini AI | Guidance · Confidence |
-
-</div>
 
 ---
 
@@ -698,56 +660,6 @@ app/
 
 </div>
 
----
-
-# 🎯 Who Is It For?
-
-<div align="center">
-
-<table>
-<tr>
-<td align="center" width="25%">
-
-### 👨‍🎓
-**Students**
-Resume Reviews
-Career Guidance
-Interview Prep
-
-</td>
-<td align="center" width="25%">
-
-### 💼
-**Job Seekers**
-ATS Optimization
-Job Matching
-Career Growth
-
-</td>
-<td align="center" width="25%">
-
-### 🏢
-**Recruiters**
-Candidate Screening
-Resume Evaluation
-Hiring Insights
-
-</td>
-<td align="center" width="25%">
-
-### 🚀
-**Organizations**
-Hiring Intelligence
-Talent Analytics
-AI Evaluation
-
-</td>
-</tr>
-</table>
-
-</div>
-
----
 
 # 🤝 Contributing
 
@@ -763,20 +675,6 @@ git commit -m "feat: your feature"
 git push origin feature/your-feature
 ```
 
----
-
-# 📊 GitHub Insights
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=yashrajagawane&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=A855F7&text_color=ffffff"/>
-<img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=yashrajagawane&theme=tokyonight&hide_border=true&background=0D1117&ring=A855F7&fire=A855F7&currStreakLabel=A855F7"/>
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=yashrajagawane&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=A855F7&line=A855F7&point=ffffff"/>
-
-</div>
-
----
 
 # 📬 Connect
 

@@ -714,10 +714,6 @@ git push origin feature/your-feature
 > 🚀 **HireMind AI** — *Transforming Career Intelligence Through AI*
 
 </div>
-
-<p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=8B5CF6&height=150&section=footer"/>
-</p>
 ---
 
 

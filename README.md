@@ -555,6 +555,271 @@ app/
 
 
 
+
+# 🎬 Product Showcase
+
+<div align="center">
+
+<img src="./frontend/public/readme/landing.png" width="100%" />
+
+</div>
+
+---
+
+# 🌟 Platform Features
+
+<table>
+<tr>
+<td width="55%">
+<img src="./frontend/public/readme/resume-review.png" width="100%"/>
+</td>
+<td width="45%">
+
+### 📄 AI Resume Review
+
+| | Feature |
+|--|---------|
+| 🤖 | ATS Compatibility Scoring |
+| 🧠 | Deep Resume Intelligence |
+| 🔍 | Skill Extraction & Mapping |
+| 💡 | AI-Powered Recommendations |
+| ✏️ | Real-Time Optimization |
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="45%">
+
+### 🎯 AI Job Matching
+
+| | Feature |
+|--|---------|
+| 📋 | Resume vs JD Semantic Match |
+| 📊 | Fit Score Breakdown |
+| 🔍 | Skill Gap Detection |
+| 🗺️ | Career Path Alignment |
+| 💡 | Smart Role Recommendations |
+
+</td>
+<td width="55%">
+<img src="./frontend/public/readme/job-match.png" width="100%"/>
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="55%">
+<img src="./frontend/public/readme/career-analytics.png" width="100%"/>
+</td>
+<td width="45%">
+
+### 📊 Career Analytics
+
+| | Feature |
+|--|---------|
+| 📈 | Growth Trajectory Tracking |
+| 🏭 | Industry Alignment Score |
+| 🧪 | Skill Depth Evaluation |
+| 🎯 | Career Readiness Index |
+| 🔮 | Predictive Insights |
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="45%">
+
+### 🎤 Interview Preparation
+
+| | Feature |
+|--|---------|
+| 🤖 | AI-Guided Preparation |
+| 📚 | Role-Specific Resources |
+| 🧪 | Weak Area Detection |
+| 💪 | Confidence Score |
+| ✅ | Readiness Evaluation |
+
+</td>
+<td width="55%">
+<img src="./frontend/public/readme/interview-prep.png" width="100%"/>
+</td>
+</tr>
+</table>
+
+---
+
+# 🔥 Why HireMind AI?
+
+<div align="center">
+
+| ❌ Traditional Process | ✅ HireMind AI |
+|----------------------|----------------|
+| Manual resume review | AI-powered instant analysis |
+| Generic one-size feedback | Personalized actionable insights |
+| Hours of screening | Near real-time evaluation |
+| Guess-based career moves | Data-driven intelligence |
+| Fragmented tools | One unified career ecosystem |
+
+</div>
+
+---
+
+# ✨ Capability Overview
+
+<div align="center">
+
+| Module | Powered By | Output |
+|--------|-----------|--------|
+| 📄 Resume Intelligence | Gemini AI + NLP | Score · Gaps · Fixes |
+| 🤖 ATS Evaluation | Groq AI | Pass Rate · Keywords |
+| 🎯 Job Matching | Semantic Engine | Fit % · Role Fit |
+| 📊 Career Analytics | AI Insights | Growth · Readiness |
+| 🎤 Interview Prep | Gemini AI | Guidance · Confidence |
+
+</div>
+
+---
+
+# 🗺️ Roadmap
+
+<div align="center">
+
+| Status | Milestone |
+|--------|-----------|
+| ✅ Done | Auth · Resume Review · ATS Engine · Job Matching · Career Analytics · Interview Prep · Cloud Deploy · Responsive UI |
+| 🚧 In Progress | Enhanced AI Recommendations · Performance Optimization · UX Improvements |
+| 🔮 Upcoming | AI Mock Interviews · Resume Builder · Recruiter Dashboard · Learning Paths · Enterprise Integrations |
+
+</div>
+
+---
+
+# 🎯 Who Is It For?
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="25%">
+
+### 👨‍🎓
+**Students**
+Resume Reviews
+Career Guidance
+Interview Prep
+
+</td>
+<td align="center" width="25%">
+
+### 💼
+**Job Seekers**
+ATS Optimization
+Job Matching
+Career Growth
+
+</td>
+<td align="center" width="25%">
+
+### 🏢
+**Recruiters**
+Candidate Screening
+Resume Evaluation
+Hiring Insights
+
+</td>
+<td align="center" width="25%">
+
+### 🚀
+**Organizations**
+Hiring Intelligence
+Talent Analytics
+AI Evaluation
+
+</td>
+</tr>
+</table>
+
+</div>
+
+---
+
+# 🤝 Contributing
+
+```
+1. Fork → 2. Branch → 3. Commit → 4. Push → 5. Pull Request
+```
+
+```bash
+git clone https://github.com/yashrajagawane/HireMind-AI.git
+cd HireMind-AI
+git checkout -b feature/your-feature
+git commit -m "feat: your feature"
+git push origin feature/your-feature
+```
+
+---
+
+# 📊 GitHub Insights
+
+<div align="center">
+
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=yashrajagawane&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=A855F7&text_color=ffffff"/>
+<img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=yashrajagawane&theme=tokyonight&hide_border=true&background=0D1117&ring=A855F7&fire=A855F7&currStreakLabel=A855F7"/>
+
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=yashrajagawane&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=A855F7&line=A855F7&point=ffffff"/>
+
+</div>
+
+---
+
+# 📬 Connect
+
+<div align="center">
+
+<a href="https://github.com/yashrajagawane">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+<a href="https://linkedin.com/in/YOUR_LINKEDIN">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+<a href="mailto:YOUR_EMAIL">
+<img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+<a href="https://hiremind-ai-seven.vercel.app">
+<img src="https://img.shields.io/badge/🚀%20Live%20Demo-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white"/>
+</a>
+
+<br><br>
+
+### Yashraj Agawane
+**AI Developer · Full Stack Engineer · ML Enthusiast**
+
+*Building intelligent systems that bridge AI and real-world problem solving.*
+
+<br>
+
+<img src="https://img.shields.io/badge/Production-Ready-success?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Full%20Stack-AI%20Platform-8B5CF6?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Cloud-Deployed-00C896?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Dual%20AI-Gemini%20%2B%20Groq-FF6B6B?style=for-the-badge"/>
+
+<br><br>
+
+> ⭐ **Star this repo** if HireMind AI helped you — it keeps the project alive.
+>
+> 🚀 **HireMind AI** — *Transforming Career Intelligence Through AI*
+
+</div>
+
+<p align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=8B5CF6&height=150&section=footer"/>
+</p>
 ---
 
 

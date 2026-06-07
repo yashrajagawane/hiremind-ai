@@ -244,12 +244,12 @@ The Interview Preparation Module helps candidates prepare effectively for techni
 
 ```
   ┌──────────────────┐
-  │  📤 Upload Resume │
+  │ 📤 Upload Resume │
   └────────┬─────────┘
            │
            ▼
   ┌──────────────────┐
-  │  🧠 AI Analysis   │  ← NLP · Skill Extraction · ATS Scoring
+  │  🧠 AI Analysis  │  ← NLP · Skill Extraction · ATS Scoring
   └────────┬─────────┘
            │
            ▼
@@ -259,22 +259,22 @@ The Interview Preparation Module helps candidates prepare effectively for techni
            │
            ▼
   ┌──────────────────┐
-  │  🎯 Job Matching  │  ← Semantic Match · Role Fit · Gap Analysis
+  │  🎯 Job Matching │  ← Semantic Match · Role Fit · Gap Analysis
   └────────┬─────────┘
            │
            ▼
   ┌──────────────────┐
-  │  📊 Career Insights│ ← Progress · Industry Fit · Recommendations
+  │ 📊Career Insights│ ← Progress · Industry Fit · Recommendations
   └────────┬─────────┘
            │
            ▼
   ┌──────────────────┐
-  │  🎤 Interview Prep│ ← Guided Prep · Confidence Score
+  │ 🎤 Interview Prep│ ← Guided Prep · Confidence Score
   └────────┬─────────┘
            │
            ▼
   ┌──────────────────┐
-  │  🚀 Career Growth │
+  │ 🚀 Career Growth │
   └──────────────────┘
 ```
 
@@ -353,11 +353,6 @@ Unlike traditional resume tools that focus on only one aspect of career developm
 </table>
 
 ---
-
-<p align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=8B5CF6&height=120&section=footer"/>
-</p>
-
 
 # 🛠️ Technology Stack
 
@@ -551,6 +546,9 @@ app/
 </div>
 
 ---
+
+
+
 
 <p align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=8B5CF6&height=120&section=footer"/>

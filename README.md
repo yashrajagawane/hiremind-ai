@@ -39,78 +39,72 @@ Transforming Resume Screening, Career Development and Interview Preparation thro
 
 </div>
 
----
-
 # 🧠 About HireMind AI
-
-**HireMind AI** is an advanced AI-powered recruitment intelligence platform designed to help students, job seekers, recruiters, and organizations make smarter career decisions through data-driven insights.
-
-The platform goes beyond traditional resume screening by combining:
-
-- 📄 Intelligent Resume Analysis
-- 🎯 AI-Based Job Matching
-- 📊 Career Growth Analytics
-- 🤖 ATS Compatibility Evaluation
-- 🎤 Interview Preparation Assistance
-- 🧠 Skill Gap Identification
-
-Instead of manually reviewing resumes and guessing career opportunities, HireMind AI leverages Artificial Intelligence to transform career development into a structured and intelligent process.
-
-Whether you are a student preparing for placements, a professional seeking better opportunities, or a recruiter looking for efficient candidate evaluation, HireMind AI provides actionable insights that accelerate decision-making.
-
+ 
+<div align="center">
+*Traditional hiring is broken. HireMind AI fixes it.*
+ 
+</div>
+<br>
+**HireMind AI** is an AI-powered recruitment intelligence platform that goes beyond resume screening — combining deep NLP, dual AI engines (Gemini + Groq), and career analytics into one unified system for students, job seekers, recruiters, and organizations.
+ 
+**What it does in one line:**
+> Upload your resume → get ATS scores, job matches, career insights, and interview guidance — all powered by AI.
+ 
 ---
-
-## 🌟 Vision
-
-To build a next-generation AI career ecosystem where every candidate receives personalized career guidance, intelligent resume evaluation, and data-backed recommendations to maximize professional success.
-
+ 
+## ⚡ Core Capabilities
+ 
+📄 **Intelligent Resume Analysis** — Deep parsing, skill extraction, and ATS scoring  
+🎯 **AI Job Matching** — Semantic resume-to-role matching with fit percentage  
+📊 **Career Growth Analytics** — Readiness index, growth tracking, industry alignment  
+🤖 **ATS Compatibility** — Keyword gap analysis and optimization suggestions  
+🎤 **Interview Preparation** — Role-specific guidance and confidence evaluation  
+🧠 **Skill Gap Identification** — Pinpoints missing skills for target roles  
+ 
 ---
-
-## 🎯 Core Mission
-
-Empower individuals and organizations by making recruitment, career planning, and interview preparation smarter, faster, and more accessible through Artificial Intelligence.
-
+ 
+## 🚀 Why HireMind AI Exists
+ 
+The problem is real on both sides of the hiring table.
+ 
+**👔 Recruiters** drown in thousands of resumes with no intelligent filtering, no candidate ranking, and no way to move fast without sacrificing quality.
+ 
+**🎓 Students & Professionals** get rejected by ATS systems despite strong qualifications, have no clarity on career direction, and prepare for interviews with generic resources that don't reflect real job requirements.
+ 
+**Both sides are working harder than they should.** Fragmented tools, manual workflows, and subjective decision-making cost everyone — time, opportunities, and confidence.
+ 
+<br>
+<div align="center">
+```
+Resume Intelligence  ·  ATS Optimization  ·  AI Job Matching
+  Career Analytics  ·  Interview Prep  ·  Smart Recommendations
+```
+ 
+*One platform. Every career need. Powered by AI.*
+ 
+</div>
 ---
-
-# 🚀 Why HireMind AI Exists
-
-Modern recruitment and career development processes are still heavily dependent on manual evaluation, subjective decision-making, and fragmented tools.
-
-Both recruiters and job seekers face significant challenges:
-
-## ❌ The Problem
-
-<table>
-<tr>
-<td width="50%">
-
-### 👔 For Recruiters
-
-- Thousands of resumes to review manually
-- Difficulty identifying qualified candidates
-- Inefficient resume filtering processes
-- Lack of intelligent candidate ranking
-- Time-consuming hiring workflows
-
-</td>
-<td width="50%">
-
-### 🎓 For Students & Professionals
-
-- ATS rejections despite strong qualifications
-- Unclear career growth direction
-- Poor understanding of industry requirements
-- Lack of personalized interview preparation
-- Difficulty matching skills with job opportunities
-
-</td>
-</tr>
-</table>
-
-## ✅ HireMind AI Solves This
-
-> One unified ecosystem combining **Resume Intelligence** · **ATS Optimization** · **AI Job Matching** · **Career Analytics** · **Interview Preparation** · **Intelligent Recommendations**
-
+ 
+## 🌟 Vision & Mission
+ 
+**Vision —** A next-generation AI career ecosystem where every candidate gets personalized guidance, intelligent resume evaluation, and data-backed recommendations — not guesswork.
+ 
+**Mission —** Make recruitment, career planning, and interview preparation smarter, faster, and more accessible through Artificial Intelligence — for everyone, everywhere.
+ 
+---
+ 
+# 🛠️ Technology Stack
+ 
+<div align="center">
+| Layer | Technology |
+|-------|-----------|
+| 🎨 **Frontend** | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) |
+| ⚙️ **Backend** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white) |
+| 🤖 **AI Engine** | ![Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white) ![Groq](https://img.shields.io/badge/Groq_AI-F55036?style=for-the-badge&logoColor=white) |
+| ☁️ **Deployment** | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) |
+ 
+</div>
 ---
 
 # 🏗️ Platform Architecture

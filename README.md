@@ -44,16 +44,9 @@ Transforming Resume Screening, Career Development and Interview Preparation thro
 
 <br>
 
-# 🧠 HireMind AI
+# 🧠 About HireMind AI
 
 ### *The intelligence layer between great candidates and the right opportunities.*
-
-<br>
-
-[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20App-6366f1?style=for-the-badge)](https://hiremind.vercel.app)
-[![Backend API](https://img.shields.io/badge/⚙️%20API%20Docs-FastAPI-009688?style=for-the-badge)](https://hiremind-api.onrender.com/docs)
-[![GitHub Stars](https://img.shields.io/github/stars/yashrajagawane/hiremind-ai?style=for-the-badge&color=f59e0b)](https://github.com/yashrajagawane/hiremind-ai)
-
 <br>
 
 > **Upload your resume. In seconds, get ATS scores, job matches, skill gaps,**
@@ -63,9 +56,9 @@ Transforming Resume Screening, Career Development and Interview Preparation thro
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  Resume Upload  →  AI Analysis  →  ATS Score  →  Job Matches   │
+│  Resume Upload  →  AI Analysis  →  ATS Score  →  Job Matches    │
 │       ↓                                              ↓          │
-│  Skill Gap Report  ←  Career Roadmap  ←  Interview Prep        │
+│  Skill Gap Report  ←  Career Roadmap  ←  Interview Prep         │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -136,22 +129,6 @@ Resume Intelligence  ·  ATS Optimization  ·  AI Job Matching
 </div>
 
 ---
-
-## 🛠️ Technology Stack
-
-<br>
-
-<div align="center">
-
-| Layer | Technology |
-|-------|-----------|
-| 🎨 **Frontend** | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) |
-| ⚙️ **Backend** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white) |
-| 🤖 **AI Engine** | ![Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white) ![Groq](https://img.shields.io/badge/Groq_AI-F55036?style=for-the-badge&logoColor=white) |
-| ☁️ **Deployment** | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) |
-
-</div>
-
 ---
 
 
@@ -159,7 +136,7 @@ Resume Intelligence  ·  ATS Optimization  ·  AI Job Matching
 
 ```
 ╔══════════════════════════════════════════════════════════╗
-║                       USER INPUT                        ║
+║                       USER INPUT                         ║
 ╚═══════════════════════════╦══════════════════════════════╝
                             ║
                             ▼

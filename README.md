@@ -42,94 +42,41 @@ Transforming Resume Screening, Career Development and Interview Preparation thro
 
 <div align="center">
 
-<br>
+## 🧠 About HireMind AI
 
-````md
-<div align="center">
-
-# 🧠 About HireMind AI
-
-### An AI-powered platform that helps candidates improve resumes, discover opportunities, and prepare for successful careers.
+An AI-powered platform that helps candidates improve resumes, discover opportunities, and prepare for successful careers.
 
 </div>
-
-> **Upload your resume and instantly receive ATS scores, job matches, skill gap analysis, career insights, and interview preparation recommendations.**
-
-```text
-Resume Upload → AI Analysis → ATS Score → Job Matching
-       ↓                          ↓
- Skill Gap Report ← Career Insights ← Interview Prep
-````
-
----
 
 ## 🚀 The Problem
 
 Recruiters spend countless hours reviewing resumes, while candidates often face ATS rejections without understanding why.
-
 Traditional hiring processes are slow, manual, and lack personalized guidance for job seekers.
-
----
 
 ## 💡 Our Solution
 
-**HireMind AI** simplifies recruitment and career planning through intelligent resume analysis and AI-driven recommendations.
+HireMind AI simplifies recruitment and career planning through intelligent resume analysis and AI-driven recommendations.
 
-### ✨ Key Features
+## Key Features
 
-📄 **Resume Analysis**
-Extracts skills, experience, education, and key insights from resumes.
-
-🎯 **AI Job Matching**
-Matches candidates with relevant job opportunities based on profile compatibility.
-
-📊 **ATS Score Checker**
-Evaluates resume performance and provides actionable optimization suggestions.
-
-🧠 **Skill Gap Analysis**
-Identifies missing skills required for target roles and career growth.
-
-🎤 **Interview Preparation**
-Generates role-specific interview questions and personalized preparation guidance.
-
-📈 **Career Insights**
-Provides career readiness scores and growth recommendations.
-
----
+📄 **Resume Analysis** – Extracts skills, experience, and key insights from resumes.
+🎯 **AI Job Matching** – Matches candidates with suitable job roles based on profile compatibility.
+📊 **ATS Score Checker** – Evaluates resume performance and provides optimization suggestions.
+🧠 **Skill Gap Analysis** – Identifies missing skills required for target roles.
+🎤 **Interview Preparation** – Generates role-specific interview questions and guidance.
+📈 **Career Insights** – Provides career readiness and growth recommendations.
 
 ## 🌟 Vision
 
-To create a smart AI-powered career ecosystem that helps candidates make informed career decisions and enables recruiters to identify the right talent faster.
+To create a smart AI-driven career ecosystem that helps candidates make informed career decisions and enables recruiters to identify the right talent faster.
 
----
-
-### 🛠 Core Capabilities
+## Technologies & Capabilities
 
 `Resume Analysis` • `ATS Optimization` • `AI Job Matching` • `Skill Gap Detection` • `Career Insights` • `Interview Preparation`
 
 ---
 
-### 🚀 Why HireMind AI?
-
-✅ Faster Resume Screening
-✅ Better ATS Compatibility
-✅ Smarter Job Applications
-✅ Personalized Career Guidance
-✅ AI-Powered Interview Preparation
-✅ Data-Driven Career Growth
-
----
-
-## 🎯 Mission
-
-To make recruitment, career planning, and interview preparation smarter, faster, and more accessible through Artificial Intelligence.
-
----
-
-**One Platform. Smarter Hiring. Better Careers.**
-
-```
-```
+One Platform. Smarter Hiring. Better Careers.
 
 
 # 🏗️ Platform Architecture

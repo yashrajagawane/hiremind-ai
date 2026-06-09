@@ -40,6 +40,121 @@ Transforming Resume Screening, Career Development and Interview Preparation thro
 </div>
 
 
+<div align="center">
+
+<br>
+
+# 🧠 HireMind AI
+
+### *The intelligence layer between great candidates and the right opportunities.*
+
+<br>
+
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20App-6366f1?style=for-the-badge)](https://hiremind.vercel.app)
+[![Backend API](https://img.shields.io/badge/⚙️%20API%20Docs-FastAPI-009688?style=for-the-badge)](https://hiremind-api.onrender.com/docs)
+[![GitHub Stars](https://img.shields.io/github/stars/yashrajagawane/hiremind-ai?style=for-the-badge&color=f59e0b)](https://github.com/yashrajagawane/hiremind-ai)
+
+<br>
+
+> **Upload your resume. In seconds, get ATS scores, job matches, skill gaps,**
+> **career analytics, and interview prep — all driven by dual AI engines.**
+
+<br>
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  Resume Upload  →  AI Analysis  →  ATS Score  →  Job Matches   │
+│       ↓                                              ↓          │
+│  Skill Gap Report  ←  Career Roadmap  ←  Interview Prep        │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+</div>
+
+---
+
+## 🔥 The Problem Nobody Has Solved — Until Now
+
+<br>
+
+The hiring process is **fundamentally broken** — for everyone involved.
+
+**👔 For Recruiters:**
+Thousands of resumes. No intelligent filtering. No ranking. No speed — without sacrificing quality. Manual decisions on a scale that was never meant to be manual.
+
+**🎓 For Students & Professionals:**
+Rejected by ATS bots despite strong qualifications. Zero clarity on what's missing. Interview prep built on generic templates that have nothing to do with the actual role.
+
+<br>
+
+> **Both sides are grinding harder than they should.**
+> Fragmented tools. Manual workflows. Guesswork dressed up as process.
+
+<br>
+
+**HireMind AI replaces all of that** — with one unified intelligence platform that understands resumes the way a senior recruiter would, and guides candidates the way a career coach would.
+
+---
+
+## ⚡ What HireMind AI Does
+
+<br>
+
+📄 **Intelligent Resume Analysis** — Deep NLP parsing, skill extraction, and instant ATS scoring that tells you exactly where your resume stands.
+
+🎯 **AI Job Matching** — Semantic resume-to-role matching with a precise fit percentage, so candidates apply smarter — not blindly.
+
+📊 **Career Growth Analytics** — Readiness index, growth trajectory, and industry alignment score built from your actual experience.
+
+🤖 **ATS Compatibility Engine** — Keyword gap detection and real optimization suggestions, not vague advice.
+
+🎤 **Interview Preparation** — Role-specific question banks, confidence evaluation, and guidance tailored to the exact job description.
+
+🧠 **Skill Gap Identification** — Pinpoints the exact skills standing between you and your target role, with a path to close them.
+
+---
+
+## 🌟 Vision & Mission
+
+<br>
+
+**Vision —** A next-generation AI career ecosystem where every candidate gets personalized guidance, intelligent evaluation, and data-backed recommendations — not guesswork.
+
+**Mission —** Make recruitment, career planning, and interview preparation smarter, faster, and radically more accessible through AI — for everyone, everywhere.
+
+<br>
+
+<div align="center">
+
+```
+Resume Intelligence  ·  ATS Optimization  ·  AI Job Matching
+  Career Analytics  ·  Interview Prep  ·  Smart Recommendations
+```
+
+*One platform. Every career need. Powered by AI.*
+
+</div>
+
+---
+
+## 🛠️ Technology Stack
+
+<br>
+
+<div align="center">
+
+| Layer | Technology |
+|-------|-----------|
+| 🎨 **Frontend** | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) |
+| ⚙️ **Backend** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white) |
+| 🤖 **AI Engine** | ![Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white) ![Groq](https://img.shields.io/badge/Groq_AI-F55036?style=for-the-badge&logoColor=white) |
+| ☁️ **Deployment** | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) |
+
+</div>
+
+---
+
+
 # 🏗️ Platform Architecture
 
 ```

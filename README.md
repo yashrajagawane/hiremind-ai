@@ -501,23 +501,6 @@ app/
 
 </div>
 
-# 📈 Project Metrics
-
-<div align="center">
-
-| Metric                   | Description                                  |
-| ------------------------ | -------------------------------------------- |
-| 📄 Resume Analysis       | AI-powered resume evaluation and ATS scoring |
-| 🎯 Job Matching          | Semantic role and candidate matching         |
-| 📊 Career Analytics      | Career readiness and growth insights         |
-| 🎤 Interview Preparation | AI-assisted interview coaching               |
-| 🤖 AI Models             | Gemini AI + Groq AI Integration              |
-| ☁️ Deployment            | Vercel + Render Cloud Infrastructure         |
-
-</div>
-
----
-
 
 # 🤝 Contributing
 

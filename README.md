@@ -489,19 +489,6 @@ app/
 
 ---
 
-# 🗺️ Roadmap
-
-<div align="center">
-
-| Status | Milestone |
-|--------|-----------|
-| ✅ Done | Auth · Resume Review · ATS Engine · Job Matching · Career Analytics · Interview Prep · Cloud Deploy · Responsive UI |
-| 🚧 In Progress | Enhanced AI Recommendations · Performance Optimization · UX Improvements |
-| 🔮 Upcoming | AI Mock Interviews · Resume Builder · Recruiter Dashboard · Learning Paths · Enterprise Integrations |
-
-</div>
-
-
 # 🤝 Contributing
 
 ```

@@ -8,9 +8,7 @@
 ██║  ██║██║██║  ██║███████╗██║ ╚═╝ ██║██║██║ ╚████║██████╔╝     ██║  ██║██║
 ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═════╝      ╚═╝  ╚═╝╚═╝
 ```
-
 ### 🤖 AI-Powered Resume Intelligence Platform
-
 <p align="center">
 Transforming Resume Screening, Career Development and Interview Preparation through Artificial Intelligence.
 </p>

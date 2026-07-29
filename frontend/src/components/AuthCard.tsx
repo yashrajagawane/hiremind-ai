@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { signupUser, loginUser } from "@/services/authService";
 
@@ -73,7 +72,6 @@ export default function AuthCard() {
 
     }
   };
-
   return (
 
     <div className="w-full max-w-3xl min-h-[500px] rounded-[24px] overflow-hidden border border-purple-500/20 bg-[#0B0B0F]/95 backdrop-blur-xl shadow-[0_0_25px_rgba(139,92,246,0.10)] flex">

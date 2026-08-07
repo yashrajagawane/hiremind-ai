@@ -12,9 +12,7 @@
 <p align="center">
 Transforming Resume Screening, Career Development and Interview Preparation through Artificial Intelligence.
 </p>
-
 <br>
-
 <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=26&duration=3000&color=A855F7&center=true&vCenter=true&width=1000&lines=AI-Powered+Resume+Intelligence+Platform;Advanced+ATS+Resume+Analysis;Career+Analytics+Engine;AI+Job+Matching+System;Interview+Preparation+Assistant;Built+with+Next.js+%2B+FastAPI+%2B+Machine+Learning" />
 
 <br><br>

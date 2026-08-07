@@ -1,3 +1,5 @@
+<a id="top"></a>
+
 <div align="center">
 
 ```
@@ -8,12 +10,16 @@
 ██║  ██║██║██║  ██║███████╗██║ ╚═╝ ██║██║██║ ╚████║██████╔╝     ██║  ██║██║
 ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═════╝      ╚═╝  ╚═╝╚═╝
 ```
+
 ### 🤖 AI-Powered Resume Intelligence Platform
+
 <p align="center">
 Transforming Resume Screening, Career Development and Interview Preparation through Artificial Intelligence.
 </p>
+
 <br>
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=26&duration=3000&color=A855F7&center=true&vCenter=true&width=1000&lines=AI-Powered+Resume+Intelligence+Platform;Advanced+ATS+Resume+Analysis;Career+Analytics+Engine;AI+Job+Matching+System;Interview+Preparation+Assistant;Built+with+Next.js+%2B+FastAPI+%2B+Machine+Learning" />
+
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=26&duration=3000&color=A855F7&center=true&vCenter=true&width=1000&lines=AI-Powered+Resume+Intelligence+Platform;Advanced+ATS+Resume+Analysis;Career+Analytics+Engine;AI+Job+Matching+System;Interview+Preparation+Assistant;Built+with+Next.js+%2B+FastAPI+%2B+Machine+Learning" />
 
 <br><br>
 
@@ -23,6 +29,13 @@ Transforming Resume Screening, Career Development and Interview Preparation thro
 <img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/AI-Resume%20Intelligence-8B5CF6?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/Architecture-Full%20Stack-blue?style=for-the-badge"/>
+</p>
+
+<p align="center">
+<img src="https://img.shields.io/github/last-commit/yashrajagawane/HireMind-AI?style=for-the-badge&color=8B5CF6"/>
+<img src="https://img.shields.io/github/languages/top/yashrajagawane/HireMind-AI?style=for-the-badge&color=A855F7"/>
+<img src="https://img.shields.io/github/repo-size/yashrajagawane/HireMind-AI?style=for-the-badge&color=46E3B7"/>
+<img src="https://img.shields.io/github/stars/yashrajagawane/HireMind-AI?style=for-the-badge&color=FFD700"/>
 </p>
 
 <br>
@@ -35,51 +48,125 @@ Transforming Resume Screening, Career Development and Interview Preparation thro
 
 </div>
 
-
-
+---
 
 <div align="center">
 
-## 🧠 About HireMind AI
+## **📑 Table of Contents**
+
+</div>
+
+- [🧠 About HireMind AI](#about)
+- [🚀 The Problem](#problem)
+- [💡 Our Solution](#solution)
+- [🌟 Key Features](#features)
+- [🎬 Product Workflow](#workflow)
+- [💎 What Makes HireMind AI Different](#advantages)
+- [📌 Business Impact](#impact)
+- [🛠️ Technology Stack](#tech-stack)
+- [🏗️ System Architecture](#architecture)
+- [🤖 AI Processing Pipeline](#ai-pipeline)
+- [⚡ Application Structure](#app-structure)
+- [☁️ Deployment Infrastructure](#deployment)
+- [🚀 Engineering Principles](#engineering)
+- [🎬 Product Showcase](#showcase)
+- [🧰 Getting Started](#getting-started)
+- [🤝 Contributing](#contributing)
+- [📄 License](#license)
+- [📬 Connect](#connect)
+
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
+</div>
+
+---
+
+<a id="about"></a>
+
+## **🧠 About HireMind AI**
+
+<div align="center">
 
 An AI-powered platform that helps candidates improve resumes, discover opportunities, and prepare for successful careers.
 
 </div>
 
-## 🚀 The Problem
+<div align="right">
 
-Recruiters spend countless hours reviewing resumes, while candidates often face ATS rejections without understanding why.
-Traditional hiring processes are slow, manual, and lack personalized guidance for job seekers.
+[⬆️ Back to Top](#top)
 
-## 💡 Our Solution
-
-HireMind AI simplifies recruitment and career planning through intelligent resume analysis and AI-driven recommendations.
-
-## Key Features
-
-📄 **Resume Analysis** – Extracts skills, experience, and key insights from resumes.
-🎯 **AI Job Matching** – Matches candidates with suitable job roles based on profile compatibility.
-📊 **ATS Score Checker** – Evaluates resume performance and provides optimization suggestions.
-🧠 **Skill Gap Analysis** – Identifies missing skills required for target roles.
-🎤 **Interview Preparation** – Generates role-specific interview questions and guidance.
-📈 **Career Insights** – Provides career readiness and growth recommendations.
-
-## 🌟 Vision
-
-To create a smart AI-driven career ecosystem that helps candidates make informed career decisions and enables recruiters to identify the right talent faster.
-
-## Technologies & Capabilities
-
-`Resume Analysis` • `ATS Optimization` • `AI Job Matching` • `Skill Gap Detection` • `Career Insights` • `Interview Preparation`
+</div>
 
 ---
 
-One Platform. Smarter Hiring. Better Careers.
+<a id="problem"></a>
 
+## **🚀 The Problem**
 
+Recruiters spend countless hours reviewing resumes, while candidates often face ATS rejections without understanding why. Traditional hiring processes are slow, manual, and lack personalized guidance for job seekers.
 
+<div align="right">
 
-# 🎬 Product Workflow
+[⬆️ Back to Top](#top)
+
+</div>
+
+---
+
+<a id="solution"></a>
+
+## **💡 Our Solution**
+
+HireMind AI simplifies recruitment and career planning through intelligent resume analysis and AI-driven recommendations.
+
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
+</div>
+
+---
+
+<a id="features"></a>
+
+## **🌟 Key Features**
+
+| | Feature | Description |
+|---|---|---|
+| 📄 | **Resume Analysis** | Extracts skills, experience, and key insights from resumes |
+| 🎯 | **AI Job Matching** | Matches candidates with suitable job roles based on profile compatibility |
+| 📊 | **ATS Score Checker** | Evaluates resume performance and provides optimization suggestions |
+| 🧠 | **Skill Gap Analysis** | Identifies missing skills required for target roles |
+| 🎤 | **Interview Preparation** | Generates role-specific interview questions and guidance |
+| 📈 | **Career Insights** | Provides career readiness and growth recommendations |
+
+<div align="center">
+
+### 🌟 Vision
+
+To create a smart AI-driven career ecosystem that helps candidates make informed career decisions and enables recruiters to identify the right talent faster.
+
+**`Resume Analysis`** • **`ATS Optimization`** • **`AI Job Matching`** • **`Skill Gap Detection`** • **`Career Insights`** • **`Interview Preparation`**
+
+---
+
+**One Platform. Smarter Hiring. Better Careers.**
+
+</div>
+
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
+</div>
+
+---
+
+<a id="workflow"></a>
+
+## **🎬 Product Workflow**
 
 ```
   ┌──────────────────┐
@@ -117,9 +204,17 @@ One Platform. Smarter Hiring. Better Careers.
   └──────────────────┘
 ```
 
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
+</div>
+
 ---
 
-# 💡 What Makes HireMind AI Different
+<a id="advantages"></a>
+
+## **💎 What Makes HireMind AI Different**
 
 Unlike traditional resume tools that focus on only one aspect of career development, HireMind AI delivers an **integrated intelligence platform**.
 
@@ -129,32 +224,40 @@ Unlike traditional resume tools that focus on only one aspect of career developm
 
 ### 🏆 Competitive Advantages
 
-✅ End-to-End Career Ecosystem  
-✅ AI-Powered Resume Intelligence  
-✅ ATS Compatibility Evaluation  
-✅ Intelligent Job Matching  
-✅ Career Growth Analytics  
-✅ Interview Preparation Assistance  
+✅ End-to-End Career Ecosystem
+✅ AI-Powered Resume Intelligence
+✅ ATS Compatibility Evaluation
+✅ Intelligent Job Matching
+✅ Career Growth Analytics
+✅ Interview Preparation Assistance
 
 </td>
 <td width="50%">
 
 ### 🔧 Technical Strengths
 
-✅ Modern Full-Stack Architecture  
-✅ Scalable Cloud Infrastructure  
-✅ Recruiter & Candidate Focused Design  
-✅ Real-World Industry Use Cases  
-✅ Next.js + FastAPI + ML Stack  
-✅ Vercel + Render Deployment  
+✅ Modern Full-Stack Architecture
+✅ Scalable Cloud Infrastructure
+✅ Recruiter & Candidate Focused Design
+✅ Real-World Industry Use Cases
+✅ Next.js + FastAPI + ML Stack
+✅ Vercel + Render Deployment
 
 </td>
 </tr>
 </table>
 
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
+</div>
+
 ---
 
-# 📌 Business Impact
+<a id="impact"></a>
+
+## **📌 Business Impact**
 
 <table>
 <tr>
@@ -191,24 +294,36 @@ Unlike traditional resume tools that focus on only one aspect of career developm
 </tr>
 </table>
 
----
+<div align="right">
 
-# 🛠️ Technology Stack
-
-<div align="center">
-
-| Layer | Technology |
-|-------|-----------|
-| 🎨 **Frontend** | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) |
-| ⚙️ **Backend** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white) |
-| 🤖 **AI Engine** | ![Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white) ![Groq](https://img.shields.io/badge/Groq_AI-F55036?style=for-the-badge&logoColor=white) |
-| ☁️ **Deployment** | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) |
+[⬆️ Back to Top](#top)
 
 </div>
 
 ---
 
-# 🏗️ System Architecture
+<a id="tech-stack"></a>
+
+## **🛠️ Technology Stack**
+
+| Layer | Technology |
+|---|---|
+| 🎨 **Frontend** | ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) |
+| ⚙️ **Backend** | ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white) |
+| 🤖 **AI Engine** | ![Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white) ![Groq](https://img.shields.io/badge/Groq_AI-F55036?style=for-the-badge&logoColor=white) |
+| ☁️ **Deployment** | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white) ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white) |
+
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
+</div>
+
+---
+
+<a id="architecture"></a>
+
+## **🏗️ System Architecture**
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -220,7 +335,7 @@ Unlike traditional resume tools that focus on only one aspect of career developm
 │              Next.js Frontend  ·  Vercel                    │
 │                                                             │
 │   Dashboard  ·  Resume Review  ·  Job Match                 │
-│   Career Analytics  ·  Interview Prep  ·  Auth              │
+│   Career Analytics  ·  Interview Prep  ·  Auth               │
 └───────────────────────────┬─────────────────────────────────┘
                             │  REST API
                             ▼
@@ -248,9 +363,17 @@ Unlike traditional resume tools that focus on only one aspect of career developm
               └────────────────────────┘
 ```
 
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
+</div>
+
 ---
 
-# 🤖 AI Processing Pipeline
+<a id="ai-pipeline"></a>
+
+## **🤖 AI Processing Pipeline**
 
 ```
   📤 Resume Upload
@@ -279,15 +402,20 @@ Unlike traditional resume tools that focus on only one aspect of career developm
         🎤 Interview Preparation
 ```
 
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
+</div>
+
 ---
 
-# ⚡ Application Structure
+<a id="app-structure"></a>
 
-<table>
-<tr>
-<td width="50%">
+## **⚡ Application Structure**
 
-### 🎨 Frontend — Next.js
+<details>
+<summary><strong>🎨 Frontend — Next.js</strong> (click to expand)</summary>
 
 ```
 src/
@@ -316,10 +444,10 @@ src/
 └── features/
 ```
 
-</td>
-<td width="50%">
+</details>
 
-### ⚙️ Backend — FastAPI
+<details>
+<summary><strong>⚙️ Backend — FastAPI</strong> (click to expand)</summary>
 
 ```
 app/
@@ -344,13 +472,19 @@ app/
     └── skills.py
 ```
 
-</td>
-</tr>
-</table>
+</details>
+
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
+</div>
 
 ---
 
-# ☁️ Deployment Infrastructure
+<a id="deployment"></a>
+
+## **☁️ Deployment Infrastructure**
 
 ```
               ┌──────────────────────┐
@@ -367,11 +501,17 @@ app/
   └─────────────────┘         └──────────────────┘
 ```
 
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
+</div>
+
 ---
 
-# 🚀 Engineering Principles
+<a id="engineering"></a>
 
-<div align="center">
+## **🚀 Engineering Principles**
 
 | Principle | Description |
 |-----------|-------------|
@@ -382,13 +522,17 @@ app/
 | ☁️ **Cloud-Native** | Zero-config deployment via Vercel + Render |
 | 📈 **Production-Ready** | Scalable services built for real-world usage |
 
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
 </div>
 
 ---
 
+<a id="showcase"></a>
 
-
-# 🎬 Product Showcase
+## **🎬 Product Showcase**
 
 <div align="center">
 
@@ -396,9 +540,9 @@ app/
 
 </div>
 
----
+<br>
 
-# 🌟 Platform Features
+### 📄 AI Resume Review
 
 <table>
 <tr>
@@ -406,8 +550,6 @@ app/
 <img src="./frontend/public/readme/resume-review.png" width="100%"/>
 </td>
 <td width="45%">
-
-### 📄 AI Resume Review
 
 | | Feature |
 |--|---------|
@@ -421,11 +563,11 @@ app/
 </tr>
 </table>
 
+### 🎯 AI Job Matching
+
 <table>
 <tr>
 <td width="45%">
-
-### 🎯 AI Job Matching
 
 | | Feature |
 |--|---------|
@@ -442,14 +584,14 @@ app/
 </tr>
 </table>
 
+### 📊 Career Analytics
+
 <table>
 <tr>
 <td width="55%">
 <img src="./frontend/public/readme/career-analytics.png" width="100%"/>
 </td>
 <td width="45%">
-
-### 📊 Career Analytics
 
 | | Feature |
 |--|---------|
@@ -463,11 +605,11 @@ app/
 </tr>
 </table>
 
+### 🎤 Interview Preparation
+
 <table>
 <tr>
 <td width="45%">
-
-### 🎤 Interview Preparation
 
 | | Feature |
 |--|---------|
@@ -484,13 +626,102 @@ app/
 </tr>
 </table>
 
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
+</div>
 
 ---
 
-# 🤝 Contributing
+<a id="getting-started"></a>
+
+## **🧰 Getting Started**
+
+### 📋 Prerequisites
+
+- **Node.js** `v18+` and npm / yarn / pnpm
+- **Python** `3.10+`
+- A **Google Gemini API key**
+- A **Groq API key**
+
+### ⚙️ Installation
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/yashrajagawane/HireMind-AI.git
+cd HireMind-AI
+```
+
+**2. Set up the frontend**
+
+```bash
+cd frontend
+npm install
+```
+
+Create a `.env.local` file:
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+**3. Set up the backend**
+
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate      # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Create a `.env` file:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key
+GROQ_API_KEY=your_groq_api_key
+DATABASE_URL=your_database_url
+```
+
+Run the API server:
+
+```bash
+uvicorn app.main:app --reload
+```
+
+**4. Open the app**
+
+Visit `http://localhost:3000` in your browser 🎉
+
+> 💡 Adjust file paths, commands, and environment variable names above to match your exact project setup.
+
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
+</div>
+
+---
+
+<a id="contributing"></a>
+
+## **🤝 Contributing**
+
+Contributions are welcome! Here's how to get started:
 
 ```
-1. Fork → 2. Branch → 3. Commit → 4. Push → 5. Pull Request
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 ```
 
 ```bash
@@ -501,8 +732,31 @@ git commit -m "feat: your feature"
 git push origin feature/your-feature
 ```
 
+<div align="right">
 
-# 📬 Connect
+[⬆️ Back to Top](#top)
+
+</div>
+
+---
+
+<a id="license"></a>
+
+## **📄 License**
+
+This project does not currently specify a license. If you plan to share, reuse, or accept contributions to this repository, consider adding a `LICENSE` file (e.g., MIT or Apache 2.0) to clarify usage rights for others.
+
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
+</div>
+
+---
+
+<a id="connect"></a>
+
+## **📬 Connect**
 
 <div align="center">
 
@@ -540,8 +794,14 @@ git push origin feature/your-feature
 > 🚀 **HireMind AI** — *Transforming Career Intelligence Through AI*
 
 </div>
----
 
+<div align="right">
+
+[⬆️ Back to Top](#top)
+
+</div>
+
+---
 
 <p align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=8B5CF6&height=120&section=footer"/>

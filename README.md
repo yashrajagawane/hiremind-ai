@@ -70,10 +70,6 @@ Transforming Resume Screening, Career Development and Interview Preparation thro
 - [☁️ Deployment Infrastructure](#deployment)
 - [🚀 Engineering Principles](#engineering)
 - [🎬 Product Showcase](#showcase)
-- [🧰 Getting Started](#getting-started)
-- [🤝 Contributing](#contributing)
-- [📄 License](#license)
-- [📬 Connect](#connect)
 
 <div align="right">
 

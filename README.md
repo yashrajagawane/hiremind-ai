@@ -31,12 +31,6 @@ Transforming Resume Screening, Career Development and Interview Preparation thro
 <img src="https://img.shields.io/badge/Architecture-Full%20Stack-blue?style=for-the-badge"/>
 </p>
 
-<p align="center">
-<img src="https://img.shields.io/github/last-commit/yashrajagawane/HireMind-AI?style=for-the-badge&color=8B5CF6"/>
-<img src="https://img.shields.io/github/languages/top/yashrajagawane/HireMind-AI?style=for-the-badge&color=A855F7"/>
-<img src="https://img.shields.io/github/repo-size/yashrajagawane/HireMind-AI?style=for-the-badge&color=46E3B7"/>
-<img src="https://img.shields.io/github/stars/yashrajagawane/HireMind-AI?style=for-the-badge&color=FFD700"/>
-</p>
 
 <br>
 

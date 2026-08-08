@@ -34,7 +34,7 @@ Transforming Resume Screening, Career Development and Interview Preparation thro
 <img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/AI-Resume%20Intelligence-8B5CF6?style=for-the-badge"/>
 
-<br><br>
+<br>
 
 <a href="https://hiremind-ai-seven.vercel.app">
 <img src="https://img.shields.io/badge/🚀%20Launch%20HireMind%20AI-Live%20Demo-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white"/>
@@ -44,7 +44,7 @@ Transforming Resume Screening, Career Development and Interview Preparation thro
 
 ---
 
-<div align="center">
+<div>
 
 ## **Table of Contents**
 

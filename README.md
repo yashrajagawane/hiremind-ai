@@ -98,7 +98,7 @@ An AI-powered platform that helps candidates improve resumes, discover opportuni
 ## **Product Showcase**
 
 <div align="center">
-<img src="./frontend/public/readme/landing.png" width="100%" />
+<img src="./assets/previews/landing-page.png" width="100%" />
 </div>
 
 <br>

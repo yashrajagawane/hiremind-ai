@@ -21,14 +21,13 @@ Transforming Resume Screening, Career Development and Interview Preparation thro
 
 <img src="https://readme-typing-svg.demolab.com?font=Orbitron&size=26&duration=3000&color=A855F7&center=true&vCenter=true&width=1000&lines=AI-Powered+Resume+Intelligence+Platform;Advanced+ATS+Resume+Analysis;Career+Analytics+Engine;AI+Job+Matching+System;Interview+Preparation+Assistant;Built+with+Next.js+%2B+FastAPI+%2B+Machine+Learning" />
 
-<br><br>
+<br>
 
 <p align="center">
 <img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/Frontend-Vercel-black?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/AI-Resume%20Intelligence-8B5CF6?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Architecture-Full%20Stack-blue?style=for-the-badge"/>
 </p>
 
 

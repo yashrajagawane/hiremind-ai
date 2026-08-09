@@ -1,4 +1,4 @@
-<a id="top"></a>
+<img width="959" height="418" alt="image" src="https://github.com/user-attachments/assets/59731d13-0990-4a87-bb66-ad5de78dd54b" /><a id="top"></a>
 
 <div align="center">
 
@@ -140,7 +140,7 @@ An AI-powered platform that helps candidates improve resumes, discover opportuni
 
 </td>
 <td width="55%">
-<img src="./frontend/public/readme/job-match.png" width="100%"/>
+<img src="./assets/previews/job-match.png" width="100%"/>
 </td>
 </tr>
 </table>

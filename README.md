@@ -1,4 +1,3 @@
-
 <div align="center">
 
 ```
@@ -149,7 +148,7 @@ An AI-powered platform that helps candidates improve resumes, discover opportuni
 <table>
 <tr>
 <td width="55%">
-<img src="./frontend/public/readme/career-analytics.png" width="100%"/>
+<img src="./assets/previews/ca.png" width="100%"/>
 </td>
 <td width="45%">
 

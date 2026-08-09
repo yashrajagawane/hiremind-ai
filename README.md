@@ -108,7 +108,7 @@ An AI-powered platform that helps candidates improve resumes, discover opportuni
 <table>
 <tr>
 <td width="55%">
-<img src="./assets/previews/resume-review.png" width="100%"/>
+<img src="./assets/previews/ai-resume-review.png" width="100%"/>
 </td>
 <td width="45%">
 

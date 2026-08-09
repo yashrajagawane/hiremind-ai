@@ -140,7 +140,7 @@ An AI-powered platform that helps candidates improve resumes, discover opportuni
 
 </td>
 <td width="55%">
-<img src="./assets/previews/job-match.png" width="100%"/>
+<img src="" width="100%"/>
 </td>
 </tr>
 </table>

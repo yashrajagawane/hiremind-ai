@@ -279,14 +279,14 @@ To create a smart AI-driven career ecosystem that helps candidates make informed
   └────────┬─────────┘
            │
            ▼
-  ┌──────────────────┐
+  ┌───────────────────┐
   │ 📊 Career Insights│ ← Progress · Industry Fit · Recommendations
-  └────────┬─────────┘
+  └────────┬──────────┘
            │
            ▼
-  ┌──────────────────┐
-  │ 🎤 Interview Prep│ ← Guided Prep · Confidence Score
-  └────────┬─────────┘
+  ┌────────────────────┐
+  │ 🎤 Interview Prep  │ ← Guided Prep · Confidence Score
+  └────────┬───────────┘
            │
            ▼
   ┌──────────────────┐
@@ -416,28 +416,28 @@ Unlike traditional resume tools that focus on only one aspect of career developm
 ## **System Architecture**
 
 ```
-┌─────────────────────────────────────────────────────────────┐
+┌──────────────────────────────────────────────────────────────┐
 │                         End Users                            │
 └───────────────────────────┬──────────────────────────────────┘
                              │
                              ▼
 ┌─────────────────────────────────────────────────────────────┐
-│               Next.js Frontend  ·  Vercel                    │
-│                                                               │
-│   Dashboard  ·  Resume Review  ·  Job Match                  │
-│   Career Analytics  ·  Interview Prep  ·  Auth                │
-└───────────────────────────┬──────────────────────────────────┘
+│               Next.js Frontend  ·  Vercel                   │
+│                                                             │
+│   Dashboard  ·  Resume Review  ·  Job Match                 │
+│   Career Analytics  ·  Interview Prep  ·  Auth              │
+└───────────────────────────┬─────────────────────────────────┘
                              │  REST API
                              ▼
 ┌─────────────────────────────────────────────────────────────┐
-│               FastAPI Backend  ·  Render                     │
-└──────────────┬────────────────────────────────┬──────────────┘
+│               FastAPI Backend  ·  Render                    │
+└──────────────┬────────────────────────────────┬─────────────┘
                │                                 │
                ▼                                 ▼
-    ┌──────────────────┐              ┌──────────────────────┐
+    ┌───────────────────┐              ┌──────────────────────┐
     │  Resume Parser    │              │    ATS Analyzer      │
     │  NLP Engine       │              │    Skills Engine     │
-    └────────┬──────────┘              └──────────┬────────────┘
+    └────────┬──────────┘              └──────────┬───────────┘
              │                                    │
              └─────────────┬──────────────────────┘
                             ▼

@@ -1,4 +1,4 @@
-from fastapi import APIRouter, UploadFile, File, HTTPException
+from fastapi import APIRouter, UploadFile, File, HTTPException, Depends
 
 import shutil
 import os
@@ -41,6 +41,16 @@ from app.services.gemini_career_analytics import (
     generate_career_analytics
 )
 
+from app.schemas.resume_schema import (
+    JobMatchRequest,
+    CareerMatchRequest,
+    InterviewPrepRequest,
+    CareerAnalyticsRequest
+)
+
+from app.middleware.auth_middleware import get_current_user
+from app.models.user import User
+
 router = APIRouter(
     prefix="/resume",
     tags=["Resume"]
@@ -54,17 +64,7 @@ os.makedirs(
 )
 
 # =========================
-# TEMP RESUME STORAGE
-# NOTE: This global state is a known architectural issue (Bug #1).
-# It will be replaced in Phase 2 with per-request data flow.
-# For now, it is clearly documented.
-# =========================
-LAST_RESUME_TEXT = ""
-LAST_CAREER_ANALYTICS = {}
-
-# =========================
 # ALLOWED FILE TYPES
-# Fix: Added file type validation (Bug #17)
 # =========================
 ALLOWED_CONTENT_TYPES = [
     "application/pdf",
@@ -78,15 +78,12 @@ ALLOWED_EXTENSIONS = [".pdf", ".docx"]
 # =========================
 @router.post("/upload")
 async def upload_resume(
-    file: UploadFile = File(...)
+    file: UploadFile = File(...),
+    current_user: User = Depends(get_current_user)
 ):
-
-    global LAST_RESUME_TEXT
-    global LAST_CAREER_ANALYTICS
 
     # =========================
     # FILE TYPE VALIDATION
-    # Fix: Reject non-PDF/DOCX files (Bug #17)
     # =========================
     file_extension = os.path.splitext(file.filename or "")[1].lower()
 
@@ -118,7 +115,6 @@ async def upload_resume(
 
     # =========================
     # EXTRACT TEXT
-    # Fix: Wrapped in try/except to handle corrupted/password-protected files (Bug #18)
     # =========================
     try:
         extracted_text = parse_resume(file_path)
@@ -140,11 +136,6 @@ async def upload_resume(
     extracted_text = clean_text(
         extracted_text
     )
-
-    # =========================
-    # STORE RESUME TEXT
-    # =========================
-    LAST_RESUME_TEXT = extracted_text
 
     # =========================
     # NLP EXTRACTIONS
@@ -172,13 +163,6 @@ async def upload_resume(
     strengths = ai_analysis.get("strengths", [])
     weaknesses = ai_analysis.get("weaknesses", [])
     recommendations = ai_analysis.get("recommendations", [])
-
-    # =========================
-    # CAREER ANALYTICS
-    # =========================
-    LAST_CAREER_ANALYTICS = (
-        generate_career_analytics(extracted_text)
-    )
 
     # =========================
     # FINAL RESPONSE
@@ -210,39 +194,33 @@ async def upload_resume(
         "weaknesses": weaknesses,
         "recommendations": recommendations,
 
-        # RESUME PREVIEW (Fix: use 2000 chars for a cleaner cut)
-        "resume_text": extracted_text[:2000],
+        # RESUME TEXT
+        "resume_text": extracted_text,
     }
 
 
 # =========================
 # AI JOB MATCHING
-# Fix: Returns proper HTTP 400 errors instead of HTTP 200 with error key (Bug #8)
 # =========================
 @router.post("/ai-job-match")
-async def ai_job_match(data: dict):
+async def ai_job_match(request: JobMatchRequest, current_user: User = Depends(get_current_user)):
 
-    global LAST_RESUME_TEXT
-
-    job_description = data.get("job_description", "")
-
-    # VALIDATION
-    if not LAST_RESUME_TEXT:
+    if not request.resume_text.strip():
         raise HTTPException(
             status_code=400,
-            detail="Please upload a resume first before running job match."
+            detail="Resume text is empty."
         )
 
-    if not job_description:
+    if not request.job_description.strip():
         raise HTTPException(
             status_code=400,
-            detail="job_description is required."
+            detail="Job description is required."
         )
 
     # AI ANALYSIS
     result = analyze_resume_with_jd(
-        LAST_RESUME_TEXT,
-        job_description
+        request.resume_text,
+        request.job_description
     )
 
     return result
@@ -250,62 +228,51 @@ async def ai_job_match(data: dict):
 
 # =========================
 # AI RESUME REVIEW
-# Fix: Returns proper HTTP 400 errors instead of HTTP 200 with error key (Bug #8)
 # =========================
 @router.post("/resume-review")
-async def resume_review():
+async def resume_review(request: CareerAnalyticsRequest, current_user: User = Depends(get_current_user)):
 
-    global LAST_RESUME_TEXT
-
-    # VALIDATION
-    if not LAST_RESUME_TEXT:
+    if not request.resume_text.strip():
         raise HTTPException(
             status_code=400,
-            detail="Please upload a resume first before running resume review."
+            detail="Resume text is empty."
         )
 
     # AI REVIEW
-    result = generate_resume_review(LAST_RESUME_TEXT)
+    result = generate_resume_review(request.resume_text)
 
     return result
 
 
 # =========================
 # AI CAREER MATCH
-# Fix: Returns proper HTTP 400 errors instead of HTTP 200 with error key (Bug #8)
 # =========================
 @router.post("/career-match")
-async def career_match(data: dict):
+async def career_match(request: CareerMatchRequest, current_user: User = Depends(get_current_user)):
 
-    global LAST_RESUME_TEXT
-
-    # VALIDATION
-    if not LAST_RESUME_TEXT:
+    if not request.resume_text.strip():
         raise HTTPException(
             status_code=400,
-            detail="Please upload a resume first before running career match."
+            detail="Resume text is empty."
         )
 
-    target_role = data.get("target_role", "")
-    experience_level = data.get("experience_level", "")
-
-    if not target_role:
+    if not request.target_role.strip():
         raise HTTPException(
             status_code=400,
-            detail="target_role is required."
+            detail="Target role is required."
         )
 
-    if not experience_level:
+    if not request.experience_level.strip():
         raise HTTPException(
             status_code=400,
-            detail="experience_level is required."
+            detail="Experience level is required."
         )
 
     # AI CAREER ANALYSIS
     result = generate_career_match(
-        LAST_RESUME_TEXT,
-        target_role,
-        experience_level
+        request.resume_text,
+        request.target_role,
+        request.experience_level
     )
 
     return result
@@ -313,40 +280,33 @@ async def career_match(data: dict):
 
 # =========================
 # AI INTERVIEW PREPARATION
-# Fix: Returns proper HTTP 400 errors instead of HTTP 200 with error key (Bug #8)
 # =========================
 @router.post("/interview-prep")
-async def interview_prep(data: dict):
+async def interview_prep(request: InterviewPrepRequest, current_user: User = Depends(get_current_user)):
 
-    global LAST_RESUME_TEXT
-
-    # VALIDATION
-    if not LAST_RESUME_TEXT:
+    if not request.resume_text.strip():
         raise HTTPException(
             status_code=400,
-            detail="Please upload a resume first before running interview prep."
+            detail="Resume text is empty."
         )
 
-    target_role = data.get("target_role", "")
-    experience_level = data.get("experience_level", "")
-
-    if not target_role:
+    if not request.target_role.strip():
         raise HTTPException(
             status_code=400,
-            detail="target_role is required."
+            detail="Target role is required."
         )
 
-    if not experience_level:
+    if not request.experience_level.strip():
         raise HTTPException(
             status_code=400,
-            detail="experience_level is required."
+            detail="Experience level is required."
         )
 
     # AI INTERVIEW PREP
     result = generate_interview_prep(
-        LAST_RESUME_TEXT,
-        target_role,
-        experience_level
+        request.resume_text,
+        request.target_role,
+        request.experience_level
     )
 
     return result
@@ -354,17 +314,16 @@ async def interview_prep(data: dict):
 
 # =========================
 # AI CAREER ANALYTICS
-# Fix: Returns proper HTTP 400 error instead of HTTP 200 with error key (Bug #8)
 # =========================
-@router.get("/career-analytics")
-async def career_analytics():
+@router.post("/career-analytics")
+async def career_analytics(request: CareerAnalyticsRequest, current_user: User = Depends(get_current_user)):
 
-    global LAST_CAREER_ANALYTICS
-
-    if not LAST_CAREER_ANALYTICS:
+    if not request.resume_text.strip():
         raise HTTPException(
             status_code=400,
-            detail="Please upload a resume first to generate career analytics."
+            detail="Resume text is empty."
         )
 
-    return LAST_CAREER_ANALYTICS
+    analytics = generate_career_analytics(request.resume_text)
+    
+    return analytics

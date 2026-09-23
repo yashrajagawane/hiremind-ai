@@ -8,14 +8,15 @@ load_dotenv()
 from app.routes.auth import router as auth_router
 from app.routes.resume import router as resume_router
 
-from app.database.db import engine
+from app.database.db import engine, Base
 from app.models.user import User
+from app.models.resume_history import ResumeHistory
 
 # =========================
 # CREATE DB TABLES
 # Fix: create_all now only runs once here (removed duplicate from user.py)
 # =========================
-User.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="HireMind AI",

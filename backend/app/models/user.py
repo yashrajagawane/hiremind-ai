@@ -1,8 +1,6 @@
 from sqlalchemy import Column, Integer, String
-from app.database.db import engine
-from sqlalchemy.orm import declarative_base
-
-Base = declarative_base()
+from sqlalchemy.orm import relationship
+from app.database.db import engine, Base
 
 
 class User(Base):
@@ -15,6 +13,8 @@ class User(Base):
     email = Column(String, unique=True, nullable=False)
 
     password = Column(String, nullable=False)
+
+    resume_histories = relationship("ResumeHistory", back_populates="user")
 
 # NOTE: create_all is intentionally NOT called here.
 # It is called once in main.py to avoid duplicate initialization.

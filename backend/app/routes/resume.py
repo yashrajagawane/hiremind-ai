@@ -48,8 +48,12 @@ from app.schemas.resume_schema import (
     CareerAnalyticsRequest
 )
 
+from sqlalchemy.orm import Session
+from app.database.db import get_db
+
 from app.middleware.auth_middleware import get_current_user
 from app.models.user import User
+from app.models.resume_history import ResumeHistory
 
 router = APIRouter(
     prefix="/resume",
@@ -74,12 +78,39 @@ ALLOWED_EXTENSIONS = [".pdf", ".docx"]
 
 
 # =========================
+# GET RESUME HISTORY
+# =========================
+@router.get("/history")
+async def get_resume_history(
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    history = db.query(ResumeHistory).filter(ResumeHistory.user_id == current_user.id).order_by(ResumeHistory.upload_date.desc()).all()
+    
+    # Format response so the frontend gets what it needs
+    return {
+        "success": True,
+        "history": [
+            {
+                "id": entry.id,
+                "filename": entry.filename,
+                "upload_date": entry.upload_date,
+                "ats_score": entry.analysis_data.get("ats_score", 0),
+                "career_domain": entry.analysis_data.get("career_domain", ""),
+                "resume_text": entry.resume_text,
+            }
+            for entry in history
+        ]
+    }
+
+# =========================
 # UPLOAD RESUME
 # =========================
 @router.post("/upload")
 async def upload_resume(
     file: UploadFile = File(...),
-    current_user: User = Depends(get_current_user)
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
 ):
 
     # =========================
@@ -165,6 +196,35 @@ async def upload_resume(
     recommendations = ai_analysis.get("recommendations", [])
 
     # =========================
+    # SAVE TO HISTORY
+    # =========================
+    analysis_data = {
+        "email": email,
+        "phone": phone,
+        "education": education,
+        "experience": experience,
+        "projects": projects,
+        "certifications": certifications,
+        "skills_found": skills_found,
+        "ats_score": ats_score,
+        "career_domain": career_domain,
+        "summary": summary,
+        "strengths": strengths,
+        "weaknesses": weaknesses,
+        "recommendations": recommendations,
+    }
+
+    history_entry = ResumeHistory(
+        user_id=current_user.id,
+        filename=file.filename,
+        resume_text=extracted_text,
+        analysis_data=analysis_data
+    )
+    db.add(history_entry)
+    db.commit()
+    db.refresh(history_entry)
+
+    # =========================
     # FINAL RESPONSE
     # =========================
     return {
@@ -174,6 +234,7 @@ async def upload_resume(
         "message": "Resume analyzed successfully 🚀",
 
         "filename": file.filename,
+        "history_id": history_entry.id,
 
         # NLP DATA
         "email": email,

@@ -1,5 +1,11 @@
 import re
 
+# =========================
+# NOTE: Dead Code (Bug #9)
+# analyze_resume() in this file is NOT called from any route.
+# The active ATS analysis uses groq_ats.py → generate_ai_ats_analysis().
+# This file is preserved in case a rule-based ATS fallback is needed in Phase 2.
+# =========================
 
 # =========================
 # SKILLS DATABASE

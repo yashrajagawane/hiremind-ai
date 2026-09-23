@@ -16,5 +16,5 @@ class User(Base):
 
     password = Column(String, nullable=False)
 
-
-Base.metadata.create_all(bind=engine)
+# NOTE: create_all is intentionally NOT called here.
+# It is called once in main.py to avoid duplicate initialization.

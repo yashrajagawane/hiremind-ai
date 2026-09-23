@@ -1,5 +1,6 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, Session
+from typing import Generator
 from dotenv import load_dotenv
 import os
 
@@ -23,4 +24,19 @@ try:
 except Exception as e:
     print("❌ Database Connection Failed")
     print(e)
-    
+
+
+# =========================
+# DB DEPENDENCY (Fix: session leak)
+# =========================
+def get_db() -> Generator[Session, None, None]:
+    """
+    FastAPI dependency that provides a DB session per request
+    and guarantees it is closed after the request completes.
+    Usage: db: Session = Depends(get_db)
+    """
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()

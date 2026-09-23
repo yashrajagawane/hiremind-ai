@@ -5,6 +5,7 @@ node_modules
 # Python
 venv
 __pycache__
+*.pyc
 
 # Environment
 .env
@@ -15,3 +16,8 @@ __pycache__
 # OS
 .DS_Store
 Thumbs.db
+
+# Uploads — never commit user-uploaded resumes (Fix: Bug #gitignore)
+backend/uploads/
+*.pdf
+*.docx

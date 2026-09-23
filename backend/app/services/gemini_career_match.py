@@ -3,10 +3,17 @@ import json
 
 import google.generativeai as genai
 
+from dotenv import load_dotenv
+
+# =========================
+# LOAD ENV
+# Fix: load_dotenv() was missing — GEMINI_API_KEY was None in production
+# =========================
+load_dotenv()
+
 # =========================
 # CONFIGURE GEMINI
 # =========================
-
 genai.configure(
     api_key=os.getenv("GEMINI_API_KEY")
 )

@@ -3,12 +3,18 @@ import re
 
 # =========================
 # DETECT CAREER DOMAIN
+# Fix: Full Stack check now comes FIRST before individual React/Node checks (Bug #15)
+# Previously, "react" was checked for Frontend before Full Stack, making Full Stack unreachable.
 # =========================
 def detect_domain(skills):
 
     skills_text = " ".join(skills).lower()
 
-    if any(skill in skills_text for skill in [
+    # Check Full Stack FIRST (requires both react AND node.js)
+    if all(skill in skills_text for skill in ["react", "node.js"]):
+        return "Full Stack Developer"
+
+    elif any(skill in skills_text for skill in [
         "machine learning",
         "deep learning",
         "nlp",
@@ -34,19 +40,14 @@ def detect_domain(skills):
     ]):
         return "Backend Developer"
 
-    elif any(skill in skills_text for skill in [
-        "react",
-        "node.js",
-        "mongodb",
-        "next.js",
-    ]):
-        return "Full Stack Developer"
-
     return "Software Developer"
 
 
 # =========================
 # GENERATE AI INSIGHTS
+# NOTE: This function is currently not called from any route (Bug #10 — dead code).
+# It is preserved here for potential future use in Phase 2 when per-user analytics
+# may need rule-based fallback insights.
 # =========================
 def generate_ai_insights(data):
 

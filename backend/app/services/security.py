@@ -4,6 +4,11 @@ from jose import jwt
 
 from datetime import datetime, timedelta
 
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 # =========================
@@ -15,11 +20,11 @@ pwd_context = CryptContext(
 )
 
 
-
 # =========================
 # JWT CONFIG
+# Fix: SECRET_KEY is now loaded from environment variable — never hardcoded
 # =========================
-SECRET_KEY = "hiremind_secret_key"
+SECRET_KEY = os.getenv("SECRET_KEY", "change_this_in_production")
 
 ALGORITHM = "HS256"
 

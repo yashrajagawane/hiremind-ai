@@ -1,4 +1,6 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
+
+from sqlalchemy.orm import Session
 
 from app.schemas.user_schema import (
     UserCreate,
@@ -7,10 +9,9 @@ from app.schemas.user_schema import (
 
 from app.models.user import User
 
-from app.database.db import SessionLocal
+from app.database.db import get_db
 
 from app.services.security import (
-
     hash_password,
     verify_password,
     create_access_token
@@ -36,11 +37,10 @@ def auth_home():
 
 # =========================
 # SIGNUP ROUTE
+# Fix: Using Depends(get_db) — session is always closed after request
 # =========================
 @router.post("/signup")
-def signup(user: UserCreate):
-
-    db = SessionLocal()
+def signup(user: UserCreate, db: Session = Depends(get_db)):
 
     # Check existing user
     existing_user = db.query(User).filter(
@@ -82,11 +82,10 @@ def signup(user: UserCreate):
 
 # =========================
 # LOGIN ROUTE
+# Fix: Using Depends(get_db) — session is always closed after request
 # =========================
 @router.post("/login")
-def login(user: UserLogin):
-
-    db = SessionLocal()
+def login(user: UserLogin, db: Session = Depends(get_db)):
 
     # Find user
     existing_user = db.query(User).filter(
@@ -136,4 +135,4 @@ def login(user: UserLogin):
             "full_name": existing_user.full_name,
             "email": existing_user.email
         }
-    }
+    }

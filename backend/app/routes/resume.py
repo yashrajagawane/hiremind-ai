@@ -45,7 +45,8 @@ from app.schemas.resume_schema import (
     JobMatchRequest,
     CareerMatchRequest,
     InterviewPrepRequest,
-    CareerAnalyticsRequest
+    CareerAnalyticsRequest,
+    RewriteRequest
 )
 
 from sqlalchemy.orm import Session
@@ -54,6 +55,8 @@ from app.database.db import get_db
 from app.middleware.auth_middleware import get_current_user
 from app.models.user import User
 from app.models.resume_history import ResumeHistory
+
+from app.services.gemini_resume_rewrite import generate_rewrite
 
 router = APIRouter(
     prefix="/resume",
@@ -388,3 +391,30 @@ async def career_analytics(request: CareerAnalyticsRequest, current_user: User =
     analytics = generate_career_analytics(request.resume_text)
     
     return analytics
+
+
+# =========================
+# AI RESUME REWRITE / SUGGESTIONS
+# =========================
+@router.post("/rewrite")
+async def rewrite_resume(request: RewriteRequest, current_user: User = Depends(get_current_user)):
+    
+    if not request.resume_text.strip():
+        raise HTTPException(
+            status_code=400,
+            detail="Resume text is empty."
+        )
+        
+    if not request.text_to_rewrite.strip():
+        raise HTTPException(
+            status_code=400,
+            detail="Text to rewrite is required."
+        )
+        
+    result = generate_rewrite(
+        request.resume_text,
+        request.section,
+        request.text_to_rewrite
+    )
+    
+    return result

@@ -17,3 +17,8 @@ class InterviewPrepRequest(BaseModel):
 
 class CareerAnalyticsRequest(BaseModel):
     resume_text: str
+
+class RewriteRequest(BaseModel):
+    resume_text: str
+    section: str
+    text_to_rewrite: str

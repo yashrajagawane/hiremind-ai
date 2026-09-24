@@ -22,3 +22,8 @@ class RewriteRequest(BaseModel):
     resume_text: str
     section: str
     text_to_rewrite: str
+
+class SalaryIntelligenceRequest(BaseModel):
+    target_role: str
+    experience_level: str
+    location: Optional[str] = "Global"

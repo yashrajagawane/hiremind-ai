@@ -46,7 +46,8 @@ from app.schemas.resume_schema import (
     CareerMatchRequest,
     InterviewPrepRequest,
     CareerAnalyticsRequest,
-    RewriteRequest
+    RewriteRequest,
+    SalaryIntelligenceRequest
 )
 
 from sqlalchemy.orm import Session
@@ -57,6 +58,7 @@ from app.models.user import User
 from app.models.resume_history import ResumeHistory
 
 from app.services.gemini_resume_rewrite import generate_rewrite
+from app.services.gemini_salary_intelligence import generate_salary_insights
 
 router = APIRouter(
     prefix="/resume",
@@ -415,6 +417,33 @@ async def rewrite_resume(request: RewriteRequest, current_user: User = Depends(g
         request.resume_text,
         request.section,
         request.text_to_rewrite
+    )
+    
+    return result
+
+
+# =========================
+# AI SALARY INTELLIGENCE
+# =========================
+@router.post("/salary-insights")
+async def salary_insights(request: SalaryIntelligenceRequest, current_user: User = Depends(get_current_user)):
+    
+    if not request.target_role.strip():
+        raise HTTPException(
+            status_code=400,
+            detail="Target role is required."
+        )
+        
+    if not request.experience_level.strip():
+        raise HTTPException(
+            status_code=400,
+            detail="Experience level is required."
+        )
+        
+    result = generate_salary_insights(
+        request.target_role,
+        request.experience_level,
+        request.location
     )
     
     return result

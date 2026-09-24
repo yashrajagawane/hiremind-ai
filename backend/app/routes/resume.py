@@ -1,7 +1,12 @@
-from fastapi import APIRouter, UploadFile, File, HTTPException, Depends
+from fastapi import APIRouter, UploadFile, File, HTTPException, Depends, Request
 
 import shutil
 import os
+
+from slowapi import Limiter
+from slowapi.util import get_remote_address
+
+limiter = Limiter(key_func=get_remote_address)
 
 from app.services.resume_parser import parse_resume
 
@@ -110,9 +115,12 @@ async def get_resume_history(
 
 # =========================
 # UPLOAD RESUME
+# Rate limit: 5 uploads per minute per IP — AI parsing is expensive
 # =========================
 @router.post("/upload")
+@limiter.limit("5/minute")
 async def upload_resume(
+    request: Request,
     file: UploadFile = File(...),
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
@@ -267,17 +275,19 @@ async def upload_resume(
 
 # =========================
 # AI JOB MATCHING
+# Rate limit: 10 requests per minute per IP
 # =========================
 @router.post("/ai-job-match")
-async def ai_job_match(request: JobMatchRequest, current_user: User = Depends(get_current_user)):
+@limiter.limit("10/minute")
+async def ai_job_match(request: Request, req: JobMatchRequest, current_user: User = Depends(get_current_user)):
 
-    if not request.resume_text.strip():
+    if not req.resume_text.strip():
         raise HTTPException(
             status_code=400,
             detail="Resume text is empty."
         )
 
-    if not request.job_description.strip():
+    if not req.job_description.strip():
         raise HTTPException(
             status_code=400,
             detail="Job description is required."
@@ -285,8 +295,8 @@ async def ai_job_match(request: JobMatchRequest, current_user: User = Depends(ge
 
     # AI ANALYSIS
     result = analyze_resume_with_jd(
-        request.resume_text,
-        request.job_description
+        req.resume_text,
+        req.job_description
     )
 
     return result
@@ -294,41 +304,45 @@ async def ai_job_match(request: JobMatchRequest, current_user: User = Depends(ge
 
 # =========================
 # AI RESUME REVIEW
+# Rate limit: 10 requests per minute per IP
 # =========================
 @router.post("/resume-review")
-async def resume_review(request: CareerAnalyticsRequest, current_user: User = Depends(get_current_user)):
+@limiter.limit("10/minute")
+async def resume_review(request: Request, req: CareerAnalyticsRequest, current_user: User = Depends(get_current_user)):
 
-    if not request.resume_text.strip():
+    if not req.resume_text.strip():
         raise HTTPException(
             status_code=400,
             detail="Resume text is empty."
         )
 
     # AI REVIEW
-    result = generate_resume_review(request.resume_text)
+    result = generate_resume_review(req.resume_text)
 
     return result
 
 
 # =========================
 # AI CAREER MATCH
+# Rate limit: 10 requests per minute per IP
 # =========================
 @router.post("/career-match")
-async def career_match(request: CareerMatchRequest, current_user: User = Depends(get_current_user)):
+@limiter.limit("10/minute")
+async def career_match(request: Request, req: CareerMatchRequest, current_user: User = Depends(get_current_user)):
 
-    if not request.resume_text.strip():
+    if not req.resume_text.strip():
         raise HTTPException(
             status_code=400,
             detail="Resume text is empty."
         )
 
-    if not request.target_role.strip():
+    if not req.target_role.strip():
         raise HTTPException(
             status_code=400,
             detail="Target role is required."
         )
 
-    if not request.experience_level.strip():
+    if not req.experience_level.strip():
         raise HTTPException(
             status_code=400,
             detail="Experience level is required."
@@ -336,9 +350,9 @@ async def career_match(request: CareerMatchRequest, current_user: User = Depends
 
     # AI CAREER ANALYSIS
     result = generate_career_match(
-        request.resume_text,
-        request.target_role,
-        request.experience_level
+        req.resume_text,
+        req.target_role,
+        req.experience_level
     )
 
     return result
@@ -346,23 +360,25 @@ async def career_match(request: CareerMatchRequest, current_user: User = Depends
 
 # =========================
 # AI INTERVIEW PREPARATION
+# Rate limit: 10 requests per minute per IP
 # =========================
 @router.post("/interview-prep")
-async def interview_prep(request: InterviewPrepRequest, current_user: User = Depends(get_current_user)):
+@limiter.limit("10/minute")
+async def interview_prep(request: Request, req: InterviewPrepRequest, current_user: User = Depends(get_current_user)):
 
-    if not request.resume_text.strip():
+    if not req.resume_text.strip():
         raise HTTPException(
             status_code=400,
             detail="Resume text is empty."
         )
 
-    if not request.target_role.strip():
+    if not req.target_role.strip():
         raise HTTPException(
             status_code=400,
             detail="Target role is required."
         )
 
-    if not request.experience_level.strip():
+    if not req.experience_level.strip():
         raise HTTPException(
             status_code=400,
             detail="Experience level is required."
@@ -370,9 +386,9 @@ async def interview_prep(request: InterviewPrepRequest, current_user: User = Dep
 
     # AI INTERVIEW PREP
     result = generate_interview_prep(
-        request.resume_text,
-        request.target_role,
-        request.experience_level
+        req.resume_text,
+        req.target_role,
+        req.experience_level
     )
 
     return result
@@ -380,43 +396,47 @@ async def interview_prep(request: InterviewPrepRequest, current_user: User = Dep
 
 # =========================
 # AI CAREER ANALYTICS
+# Rate limit: 10 requests per minute per IP
 # =========================
 @router.post("/career-analytics")
-async def career_analytics(request: CareerAnalyticsRequest, current_user: User = Depends(get_current_user)):
+@limiter.limit("10/minute")
+async def career_analytics(request: Request, req: CareerAnalyticsRequest, current_user: User = Depends(get_current_user)):
 
-    if not request.resume_text.strip():
+    if not req.resume_text.strip():
         raise HTTPException(
             status_code=400,
             detail="Resume text is empty."
         )
 
-    analytics = generate_career_analytics(request.resume_text)
+    analytics = generate_career_analytics(req.resume_text)
     
     return analytics
 
 
 # =========================
 # AI RESUME REWRITE / SUGGESTIONS
+# Rate limit: 10 requests per minute per IP
 # =========================
 @router.post("/rewrite")
-async def rewrite_resume(request: RewriteRequest, current_user: User = Depends(get_current_user)):
+@limiter.limit("10/minute")
+async def rewrite_resume(request: Request, req: RewriteRequest, current_user: User = Depends(get_current_user)):
     
-    if not request.resume_text.strip():
+    if not req.resume_text.strip():
         raise HTTPException(
             status_code=400,
             detail="Resume text is empty."
         )
         
-    if not request.text_to_rewrite.strip():
+    if not req.text_to_rewrite.strip():
         raise HTTPException(
             status_code=400,
             detail="Text to rewrite is required."
         )
         
     result = generate_rewrite(
-        request.resume_text,
-        request.section,
-        request.text_to_rewrite
+        req.resume_text,
+        req.section,
+        req.text_to_rewrite
     )
     
     return result
@@ -424,26 +444,28 @@ async def rewrite_resume(request: RewriteRequest, current_user: User = Depends(g
 
 # =========================
 # AI SALARY INTELLIGENCE
+# Rate limit: 10 requests per minute per IP
 # =========================
 @router.post("/salary-insights")
-async def salary_insights(request: SalaryIntelligenceRequest, current_user: User = Depends(get_current_user)):
+@limiter.limit("10/minute")
+async def salary_insights(request: Request, req: SalaryIntelligenceRequest, current_user: User = Depends(get_current_user)):
     
-    if not request.target_role.strip():
+    if not req.target_role.strip():
         raise HTTPException(
             status_code=400,
             detail="Target role is required."
         )
         
-    if not request.experience_level.strip():
+    if not req.experience_level.strip():
         raise HTTPException(
             status_code=400,
             detail="Experience level is required."
         )
         
     result = generate_salary_insights(
-        request.target_role,
-        request.experience_level,
-        request.location
+        req.target_role,
+        req.experience_level,
+        req.location
     )
     
     return result

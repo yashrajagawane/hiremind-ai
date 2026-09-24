@@ -2,6 +2,7 @@ import os
 import json
 import google.generativeai as genai
 from dotenv import load_dotenv
+from app.utils.cache import cached_response
 
 load_dotenv()
 
@@ -9,6 +10,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 model = genai.GenerativeModel("gemini-2.5-flash")
 
+@cached_response
 def generate_salary_insights(target_role: str, experience_level: str, location: str) -> dict:
     try:
         prompt = f"""

@@ -4,6 +4,7 @@ import json
 import google.generativeai as genai
 
 from dotenv import load_dotenv
+from app.utils.cache import cached_response
 
 # =========================
 # LOAD ENV

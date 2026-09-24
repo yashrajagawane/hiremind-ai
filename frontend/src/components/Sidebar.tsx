@@ -11,6 +11,9 @@ import {
   Settings,
   ChevronLeft,
   ChevronRight,
+  Clock,
+  Wand2,
+  DollarSign
 } from "lucide-react";
 
 interface SidebarProps {
@@ -55,6 +58,24 @@ export default function Sidebar({
       name: "Career Analytics",
       href: "/career-analytics",
       icon: <BarChart3 size={20} />,
+    },
+
+    {
+      name: "Resume History",
+      href: "/resume-history",
+      icon: <Clock size={20} />,
+    },
+
+    {
+      name: "AI Suggestions",
+      href: "/ai-suggestions",
+      icon: <Wand2 size={20} />,
+    },
+
+    {
+      name: "Salary Insights",
+      href: "/salary-insights",
+      icon: <DollarSign size={20} />,
     },
 
     {

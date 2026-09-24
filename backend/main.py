@@ -44,14 +44,14 @@ app.state.limiter = limiter
 
 # =========================
 # CORS MIDDLEWARE
-# Fix: specific origin from FRONTEND_URL env var — wildcard+credentials is blocked by browsers
+# Allow all origins to avoid trailing slash or mismatched domain issues.
+# allow_credentials must be False when allow_origins=["*"]
 # =========================
-FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[FRONTEND_URL],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )

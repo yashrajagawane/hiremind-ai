@@ -25,7 +25,7 @@ Resume Analysis · ATS Scoring · Job Matching · Career Analytics · Interview 
 <img src="https://img.shields.io/badge/🚀_Live_Demo-hiremind--ai.vercel.app-8B5CF6?style=for-the-badge&logoColor=white"/>
 </a>
 
-<br><br>
+<br>
 
 <img src="https://img.shields.io/badge/Next.js_16-000?style=flat-square&logo=nextdotjs&logoColor=white"/>
 <img src="https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black"/>
@@ -158,7 +158,7 @@ AI-generated interview questions and preparation strategies tailored to your res
 ┌─────────────────────────────────────────────────────────────────┐
 │                      Client (Browser)                           │
 │                                                                 │
-│   Next.js 16  ·  React 19  ·  TypeScript  ·  Tailwind CSS v4   │
+│   Next.js 16  ·  React 19  ·  TypeScript  ·  Tailwind CSS v4    │
 │   Pages: Dashboard · Resume Review · Job Match · Career Match   │
 │   Career Analytics · Interview Prep · AI Suggestions            │
 │   Salary Insights · Resume History · Settings                   │
@@ -169,9 +169,9 @@ AI-generated interview questions and preparation strategies tailored to your res
                                │  REST API (Axios)
                                ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                     FastAPI Backend                              │
+│                     FastAPI Backend                             │
 │                                                                 │
-│   Middleware: CORS · SlowAPI Rate Limiting · JWT Auth            │
+│   Middleware: CORS · SlowAPI Rate Limiting · JWT Auth           │
 │   Routes:    /auth/*  ·  /resume/*                              │
 │   Security:  bcrypt password hashing · HS256 JWT tokens         │
 │                                                                 │
@@ -180,14 +180,14 @@ AI-generated interview questions and preparation strategies tailored to your res
         │                  │                  │
         ▼                  ▼                  ▼
 ┌──────────────┐  ┌────────────────┐  ┌───────────────────┐
-│   NLP Layer  │  │   AI Engines   │  │    Database        │
-│              │  │                │  │                    │
-│  spaCy NLP   │  │  Gemini 2.5    │  │   PostgreSQL       │
-│  Regex       │  │  Flash         │  │   (SQLAlchemy ORM) │
-│  Skills DB   │  │                │  │                    │
-│  PyPDF2      │  │  Groq API      │  │   Tables:          │
-│  python-docx │  │  (Llama 3.1    │  │   · users          │
-│              │  │   8B Instant)  │  │   · resume_history │
+│   NLP Layer  │  │   AI Engines   │  │    Database       │
+│              │  │                │  │                   │
+│  spaCy NLP   │  │  Gemini 2.5    │  │   PostgreSQL      │
+│  Regex       │  │  Flash         │  │   (SQLAlchemy ORM)│
+│  Skills DB   │  │                │  │                   │
+│  PyPDF2      │  │  Groq API      │  │   Tables:         │
+│  python-docx │  │  (Llama 3.1    │  │   · users         │
+│              │  │   8B Instant)  │  │   · resume_history│
 └──────────────┘  └────────────────┘  └───────────────────┘
 ```
 

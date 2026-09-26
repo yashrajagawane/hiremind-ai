@@ -207,27 +207,27 @@ export default function Sidebar({
       </div>
 
       {/* USER */}
-      <div className="p-4 border-t border-white/5 shrink-0">
+      <div className="px-3 py-2 border-t border-white/5 shrink-0">
 
         <div
           className="
-          flex items-center gap-3
+          flex items-center gap-2
           bg-[#050505]
-          rounded-2xl
-          p-3
+          rounded-xl
+          px-3 py-2
           border border-white/5
         "
         >
 
           <div
             className="
-            w-10 h-10
+            w-7 h-7
             rounded-full
             bg-gradient-to-r
             from-blue-500
             to-purple-500
             flex items-center justify-center
-            text-white font-bold
+            text-white text-xs font-bold shrink-0
           "
           >
             {user?.full_name?.charAt(0)}
@@ -237,11 +237,11 @@ export default function Sidebar({
 
             <div className="text-left">
 
-              <p className="text-xs text-gray-500">
+              <p className="text-[10px] text-gray-500 leading-none">
                 Logged in as
               </p>
 
-              <p className="text-sm text-white font-medium">
+              <p className="text-xs text-white font-medium leading-none mt-0.5">
                 {user?.full_name}
               </p>
 

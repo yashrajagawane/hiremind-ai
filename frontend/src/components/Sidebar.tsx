@@ -93,19 +93,19 @@ export default function Sidebar({
       bg-black
       border-r border-white/5
       transition-all duration-300
-      flex flex-col justify-between
+      flex flex-col
       z-50
       ${collapsed ? "w-[90px]" : "w-[260px]"}
     `}
     >
 
       {/* TOP */}
-      <div>
+      <div className="flex flex-col flex-1 min-h-0">
 
         {/* LOGO */}
         <div
           className="
-          h-[72px]
+          h-[72px] min-h-[72px] shrink-0
           flex items-center justify-between
           px-5
           border-b border-white/5
@@ -156,7 +156,7 @@ export default function Sidebar({
         </div>
 
         {/* MENU */}
-        <div className="p-4 space-y-3">
+        <div className="p-4 space-y-3 flex-1 overflow-y-auto">
 
           {menuItems.map((item, index) => (
 
@@ -207,7 +207,7 @@ export default function Sidebar({
       </div>
 
       {/* USER */}
-      <div className="p-4 border-t border-white/5">
+      <div className="p-4 border-t border-white/5 shrink-0">
 
         <div
           className="

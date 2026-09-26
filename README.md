@@ -25,7 +25,7 @@ Resume Analysis · ATS Scoring · Job Matching · Career Analytics · Interview 
 <img src="https://img.shields.io/badge/🚀_Live_Demo-hiremind--ai.vercel.app-8B5CF6?style=for-the-badge&logoColor=white"/>
 </a>
 
-<br>
+<br><br>
 
 <img src="https://img.shields.io/badge/Next.js_16-000?style=flat-square&logo=nextdotjs&logoColor=white"/>
 <img src="https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black"/>

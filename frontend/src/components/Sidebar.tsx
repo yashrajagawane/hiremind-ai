@@ -156,7 +156,7 @@ export default function Sidebar({
         </div>
 
         {/* MENU */}
-        <div className="p-4 space-y-3 flex-1 overflow-y-auto">
+        <div className="p-4 space-y-3 flex-1 overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-black [&::-webkit-scrollbar-thumb]:bg-[#222] [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-[#333]">
 
           {menuItems.map((item, index) => (
 

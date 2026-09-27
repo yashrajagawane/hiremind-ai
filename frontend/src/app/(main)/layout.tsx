@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 
 import Sidebar from "@/components/Sidebar";
 import Topbar from "@/components/Topbar";
-import PageTransition from "@/components/PageTransition";
 
 export default function MainLayout({
   children,
@@ -15,37 +14,45 @@ export default function MainLayout({
 
   const router = useRouter();
 
-  const [collapsed, setCollapsed] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [user, setUser] = useState<any>(null);
+  const [collapsed, setCollapsed] =
+    useState(false);
+
+  const [user, setUser] =
+    useState<any>(null);
 
   useEffect(() => {
 
-    const token = localStorage.getItem("token");
+    const token =
+      localStorage.getItem("token");
 
     if (!token) {
+
       router.push("/login");
       return;
+
     }
 
-    const storedUser = localStorage.getItem("user");
+    const storedUser =
+      localStorage.getItem("user");
 
     if (storedUser) {
-      setUser(JSON.parse(storedUser));
+
+      setUser(
+        JSON.parse(storedUser)
+      );
+
     }
 
   }, [router]);
 
   return (
 
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="min-h-screen bg-black text-white">
 
       {/* SIDEBAR */}
       <Sidebar
         collapsed={collapsed}
         setCollapsed={setCollapsed}
-        mobileOpen={mobileOpen}
-        setMobileOpen={setMobileOpen}
         user={user}
       />
 
@@ -53,21 +60,16 @@ export default function MainLayout({
       <div
         className={`
         transition-all duration-300
-        /* Mobile: full width, no margin */
-        ml-0
-        /* Desktop: margin depends on collapse state */
-        ${collapsed ? "md:ml-[90px]" : "md:ml-[260px]"}
+        ${collapsed ? "ml-[90px]" : "ml-[260px]"}
       `}
       >
 
         {/* TOPBAR */}
-        <Topbar onMenuClick={() => setMobileOpen(true)} />
+        <Topbar />
 
         {/* PAGE CONTENT */}
-        <div className="p-4 md:p-8">
-          <PageTransition>
-            {children}
-          </PageTransition>
+        <div className="p-8">
+          {children}
         </div>
 
       </div>

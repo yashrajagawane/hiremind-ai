@@ -13,23 +13,18 @@ import {
   ChevronRight,
   Clock,
   Wand2,
-  DollarSign,
-  X
+  DollarSign
 } from "lucide-react";
 
 interface SidebarProps {
   collapsed: boolean;
   setCollapsed: (value: boolean) => void;
-  mobileOpen: boolean;
-  setMobileOpen: (value: boolean) => void;
   user: any;
 }
 
 export default function Sidebar({
   collapsed,
   setCollapsed,
-  mobileOpen,
-  setMobileOpen,
   user,
 }: SidebarProps) {
 
@@ -91,210 +86,173 @@ export default function Sidebar({
   ];
 
   return (
-    <>
 
-      {/* MOBILE OVERLAY */}
-      {mobileOpen && (
+    <aside
+      className={`
+      fixed top-0 left-0 h-screen
+      bg-black
+      border-r border-white/5
+      transition-all duration-300
+      flex flex-col
+      z-50
+      ${collapsed ? "w-[90px]" : "w-[260px]"}
+    `}
+    >
+
+      {/* TOP */}
+      <div className="flex flex-col flex-1 min-h-0">
+
+        {/* LOGO */}
         <div
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
-          onClick={() => setMobileOpen(false)}
-        />
-      )}
+          className="
+          h-[72px] min-h-[72px] shrink-0
+          flex items-center justify-between
+          px-5
+          border-b border-white/5
+        "
+        >
 
-      <aside
-        className={`
-        fixed top-0 left-0 h-screen
-        bg-black
-        border-r border-white/5
-        transition-all duration-300
-        flex flex-col
-        z-50
+          {!collapsed && (
 
-        /* Mobile: slide in/out */
-        ${mobileOpen ? "translate-x-0" : "-translate-x-full"}
-        md:translate-x-0
+            <h1
+              className="
+              text-2xl font-bold
+              bg-gradient-to-r
+              from-white
+              via-blue-400
+              to-purple-500
+              bg-clip-text text-transparent
+            "
+            >
+              HireMind AI
+            </h1>
 
-        /* Desktop: collapse logic */
-        ${collapsed ? "md:w-[90px]" : "md:w-[260px]"}
-        w-[260px]
-      `}
-      >
+          )}
 
-        {/* TOP */}
-        <div className="flex flex-col flex-1 min-h-0">
-
-          {/* LOGO */}
-          <div
+          <button
+            onClick={() => setCollapsed(!collapsed)}
             className="
-            h-[72px] min-h-[72px] shrink-0
-            flex items-center justify-between
-            px-5
-            border-b border-white/5
+            w-9 h-9
+            rounded-xl
+            bg-[#0A0A0A]
+            border border-white/10
+            flex items-center justify-center
+            text-[#6EA8FF]
+            hover:bg-gradient-to-r
+            hover:from-[#0A1120]
+            hover:to-[#120A20]
+            transition-all duration-300
           "
           >
 
-            {!collapsed && (
-
-              <h1
-                className="
-                text-2xl font-bold
-                bg-gradient-to-r
-                from-white
-                via-blue-400
-                to-purple-500
-                bg-clip-text text-transparent
-              "
-              >
-                HireMind AI
-              </h1>
-
+            {collapsed ? (
+              <ChevronRight size={18} />
+            ) : (
+              <ChevronLeft size={18} />
             )}
 
-            {/* Desktop: collapse button */}
-            <button
-              onClick={() => setCollapsed(!collapsed)}
+          </button>
+
+        </div>
+
+        {/* MENU */}
+        <div className="p-4 space-y-3 flex-1 overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-black [&::-webkit-scrollbar-thumb]:bg-[#222] [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-[#333]">
+
+          {menuItems.map((item, index) => (
+
+            <Link
+              key={index}
+              href={item.href}
               className="
-              hidden md:flex
-              w-9 h-9
-              rounded-xl
-              bg-surface-hover
-              border border-white/10
-              items-center justify-center
-              text-accent
+              w-full
+              flex items-center gap-4
+              px-4 py-3
+              rounded-2xl
+              bg-[#050505]
               hover:bg-gradient-to-r
               hover:from-[#0A1120]
               hover:to-[#120A20]
+              border border-white/5
+              hover:border-purple-500/20
               transition-all duration-300
+              text-white
+              group
             "
             >
 
-              {collapsed ? (
-                <ChevronRight size={18} />
-              ) : (
-                <ChevronLeft size={18} />
-              )}
-
-            </button>
-
-            {/* Mobile: close button */}
-            <button
-              onClick={() => setMobileOpen(false)}
-              className="
-              flex md:hidden
-              w-9 h-9
-              rounded-xl
-              bg-surface-hover
-              border border-white/10
-              items-center justify-center
-              text-accent
-              transition-all duration-300
-            "
-            >
-              <X size={18} />
-            </button>
-
-          </div>
-
-          {/* MENU */}
-          <div className="p-4 space-y-3 flex-1 overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-black [&::-webkit-scrollbar-thumb]:bg-[#222] [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-[#333]">
-
-            {menuItems.map((item, index) => (
-
-              <Link
-                key={index}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
+              <span
                 className="
-                w-full
-                flex items-center gap-4
-                px-4 py-3
-                rounded-2xl
-                bg-surface
-                hover:bg-gradient-to-r
-                hover:from-[#0A1120]
-                hover:to-[#120A20]
-                border border-white/5
-                hover:border-purple-500/20
+                text-[#6EA8FF]
+                group-hover:scale-110
                 transition-all duration-300
-                text-white
-                group
               "
               >
+                {item.icon}
+              </span>
 
-                <span
-                  className="
-                  text-accent
-                  group-hover:scale-110
-                  transition-all duration-300
-                "
-                >
-                  {item.icon}
+              {!collapsed && (
+
+                <span className="text-sm font-medium tracking-wide">
+                  {item.name}
                 </span>
 
-                {!collapsed && (
+              )}
 
-                  <span className="text-sm font-medium tracking-wide">
-                    {item.name}
-                  </span>
+            </Link>
 
-                )}
-
-              </Link>
-
-            ))}
-
-          </div>
+          ))}
 
         </div>
 
-        {/* USER */}
-        <div className="px-3 py-2 border-t border-white/5 shrink-0">
+      </div>
+
+      {/* USER */}
+      <div className="px-3 py-2 border-t border-white/5 shrink-0">
+
+        <div
+          className="
+          flex items-center gap-2
+          bg-[#050505]
+          rounded-xl
+          px-3 py-2
+          border border-white/5
+        "
+        >
 
           <div
             className="
-            flex items-center gap-2
-            bg-surface
-            rounded-xl
-            px-3 py-2
-            border border-white/5
+            w-7 h-7
+            rounded-full
+            bg-gradient-to-r
+            from-blue-500
+            to-purple-500
+            flex items-center justify-center
+            text-white text-xs font-bold shrink-0
           "
           >
+            {user?.full_name?.charAt(0)}
+          </div>
 
-            <div
-              className="
-              w-7 h-7
-              rounded-full
-              bg-gradient-to-r
-              from-blue-500
-              to-purple-500
-              flex items-center justify-center
-              text-white text-xs font-bold shrink-0
-            "
-            >
-              {user?.full_name?.charAt(0)}
+          {!collapsed && (
+
+            <div className="text-left">
+
+              <p className="text-[10px] text-gray-500 leading-none">
+                Logged in as
+              </p>
+
+              <p className="text-xs text-white font-medium leading-none mt-0.5">
+                {user?.full_name}
+              </p>
+
             </div>
 
-            {!collapsed && (
-
-              <div className="text-left">
-
-                <p className="text-[10px] text-gray-500 leading-none">
-                  Logged in as
-                </p>
-
-                <p className="text-xs text-white font-medium leading-none mt-0.5">
-                  {user?.full_name}
-                </p>
-
-              </div>
-
-            )}
-
-          </div>
+          )}
 
         </div>
 
-      </aside>
-    </>
+      </div>
+
+    </aside>
   );
 }

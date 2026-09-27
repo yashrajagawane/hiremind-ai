@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import axios from "axios";
-import { toast } from "sonner";
 
 import {
   UploadCloud,
   FileText,
   Loader2,
+  CheckCircle2,
 } from "lucide-react";
 
 interface ResumeUploadProps {
@@ -18,8 +18,14 @@ export default function ResumeUpload({
   setAtsData,
 }: ResumeUploadProps) {
 
-  const [loading, setLoading] = useState(false);
-  const [uploadedFileName, setUploadedFileName] = useState("");
+  const [loading, setLoading] =
+    useState(false);
+
+  const [message, setMessage] =
+    useState("");
+
+  const [uploadedFileName, setUploadedFileName] =
+    useState("");
 
 
   // =========================
@@ -36,15 +42,18 @@ export default function ResumeUpload({
 
     setUploadedFileName(file.name);
 
+    setMessage("");
+
     try {
 
       setLoading(true);
-      
-      // Reset the file input so the same file can be selected again if needed
-      e.target.value = '';
 
       const formData = new FormData();
-      formData.append("file", file);
+
+      formData.append(
+        "file",
+        file
+      );
 
       // =========================
       // API CALL
@@ -55,8 +64,8 @@ export default function ResumeUpload({
         formData,
         {
           headers: {
-            "Content-Type": "multipart/form-data",
-            "Authorization": `Bearer ${localStorage.getItem("token")}`
+            "Content-Type":
+              "multipart/form-data",
           },
         }
       );
@@ -68,14 +77,21 @@ export default function ResumeUpload({
       setAtsData(response.data);
 
       // =========================
-      // SUCCESS TOAST
+      // SUCCESS MESSAGE
       // =========================
-      toast.success(response.data.message || "Resume uploaded and analyzed!");
+
+      setMessage(
+        response.data.message
+      );
 
     } catch (error: any) {
 
-      console.error(error);
-      toast.error(error?.response?.data?.message || "Upload failed... Please try again.");
+      console.log(error);
+
+      setMessage(
+        error?.response?.data?.message ||
+        "Upload failed..."
+      );
 
     } finally {
       setLoading(false);
@@ -85,7 +101,7 @@ export default function ResumeUpload({
   return (
     <div
       className="
-      bg-surface
+      bg-[#050505]
       border border-white/5
       rounded-3xl
       p-6
@@ -94,7 +110,8 @@ export default function ResumeUpload({
     >
 
       {/* HEADER */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between mb-5 gap-4">
+
+      <div className="flex items-center justify-between mb-5">
 
         <div>
           <h2 className="text-2xl font-bold text-white">
@@ -108,24 +125,24 @@ export default function ResumeUpload({
 
         <div
           className="
-          hidden md:flex
           w-12 h-12
           rounded-2xl
           bg-gradient-to-r
           from-blue-500/10
           to-purple-500/10
           border border-blue-500/20
-          items-center justify-center
+          flex items-center justify-center
         "
         >
           <UploadCloud
             size={24}
-            className="text-accent"
+            className="text-[#6EA8FF]"
           />
         </div>
       </div>
 
       {/* DROP AREA */}
+
       <div
         className="
         border-2 border-dashed border-purple-500/20
@@ -139,6 +156,7 @@ export default function ResumeUpload({
       >
 
         {/* ICON */}
+
         <div className="flex justify-center mb-4">
 
           <div
@@ -157,14 +175,14 @@ export default function ResumeUpload({
               <Loader2
                 size={30}
                 className="
-                text-accent
+                text-[#6EA8FF]
                 animate-spin
               "
               />
             ) : (
               <UploadCloud
                 size={30}
-                className="text-accent"
+                className="text-[#6EA8FF]"
               />
             )}
 
@@ -172,6 +190,7 @@ export default function ResumeUpload({
         </div>
 
         {/* TITLE */}
+
         <h3 className="text-2xl font-bold text-white mb-2">
           Upload Your Resume
         </h3>
@@ -181,10 +200,11 @@ export default function ResumeUpload({
         </p>
 
         {/* CHOOSE FILE BUTTON */}
+
         <div className="flex justify-center">
 
           <label
-            className={`
+            className="
             px-5 py-3
             rounded-xl
             bg-gradient-to-r
@@ -194,30 +214,34 @@ export default function ResumeUpload({
             text-white
             font-semibold
             text-sm
+            hover:scale-105
+            transition-all duration-300
+            cursor-pointer
             shadow-[0_0_20px_rgba(59,130,246,0.18)]
-            ${loading ? 'opacity-70 cursor-not-allowed' : 'hover:scale-105 cursor-pointer transition-all duration-300'}
-          `}
+          "
           >
 
-            {loading ? "Analyzing Document..." : "Choose Resume"}
+            {loading
+              ? "Uploading..."
+              : "Choose Resume"}
 
             <input
               type="file"
               accept=".pdf,.docx"
               className="hidden"
-              disabled={loading}
               onChange={handleFileChange}
             />
           </label>
         </div>
 
         {/* FILE NAME */}
+
         {uploadedFileName && (
           <div
             className="
             flex items-center justify-center gap-2
             mt-5
-            text-accent-lavender
+            text-[#C4B5FD]
           "
           >
             <FileText size={16} />
@@ -225,6 +249,23 @@ export default function ResumeUpload({
             <span className="text-sm">
               {uploadedFileName}
             </span>
+          </div>
+        )}
+
+        {/* SUCCESS MESSAGE */}
+
+        {message && (
+          <div
+            className="
+            flex items-center justify-center gap-2
+            mt-4
+            text-green-400
+            text-sm
+            font-medium
+          "
+          >
+            <CheckCircle2 size={17} />
+            {message}
           </div>
         )}
 

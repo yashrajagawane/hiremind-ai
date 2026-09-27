@@ -1,5 +1,37 @@
 @import "tailwindcss";
 
+/* =========================
+   HireMind AI — Design System
+   ========================= */
+
+@theme {
+  /* Backgrounds */
+  --color-background: #000000;
+  --color-surface: #050505;
+  --color-surface-hover: #0A0A0A;
+  --color-surface-alt: #0B0B0F;
+  --color-surface-input: #141414;
+
+  /* Borders */
+  --color-border: rgba(255, 255, 255, 0.05);
+  --color-border-hover: rgba(255, 255, 255, 0.1);
+
+  /* Primary (Purple) */
+  --color-primary: #8B5CF6;
+  --color-primary-soft: rgba(139, 92, 246, 0.1);
+  --color-primary-border: rgba(139, 92, 246, 0.2);
+
+  /* Secondary (Blue) */
+  --color-secondary: #3B82F6;
+  --color-secondary-soft: rgba(59, 130, 246, 0.1);
+  --color-secondary-border: rgba(59, 130, 246, 0.2);
+
+  /* Accent */
+  --color-accent: #6EA8FF;
+  --color-accent-lavender: #C4B5FD;
+  --color-accent-purple: #A78BFA;
+}
+
 :root {
   --background: #050505;
   --foreground: #ffffff;
@@ -21,6 +53,5 @@ body {
 }
 
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-

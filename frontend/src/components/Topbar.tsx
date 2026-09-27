@@ -1,8 +1,13 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { Menu } from "lucide-react";
 
-export default function Topbar() {
+interface TopbarProps {
+  onMenuClick?: () => void;
+}
+
+export default function Topbar({ onMenuClick }: TopbarProps) {
 
   const pathname = usePathname();
 
@@ -48,6 +53,30 @@ export default function Topbar() {
         "Track hiring potential and career growth insights",
     },
 
+    "/resume-history": {
+
+      title: "Resume History",
+
+      description:
+        "View and manage all your past resume analyses",
+    },
+
+    "/ai-suggestions": {
+
+      title: "AI Suggestions",
+
+      description:
+        "Get AI-powered rewrites for any section of your resume",
+    },
+
+    "/salary-insights": {
+
+      title: "Salary Intelligence",
+
+      description:
+        "Explore market salary data, demand trends, and negotiation tips",
+    },
+
     "/settings": {
 
       title: "Settings",
@@ -86,32 +115,53 @@ export default function Topbar() {
     >
 
       {/* LEFT */}
-      <div>
+      <div className="flex items-center gap-4">
 
-        <h1
-          className="
-          text-3xl
-          font-bold
-          bg-gradient-to-r
-          from-white
-          via-blue-400
-          to-purple-500
-          bg-clip-text
-          text-transparent
-        "
-        >
-          {currentPage.title}
-        </h1>
+        {/* Mobile hamburger */}
+        {onMenuClick && (
+          <button
+            onClick={onMenuClick}
+            className="
+            flex md:hidden
+            w-9 h-9
+            rounded-xl
+            bg-surface-hover
+            border border-white/10
+            items-center justify-center
+            text-accent
+            transition-all duration-300
+          "
+          >
+            <Menu size={18} />
+          </button>
+        )}
 
-        <p
-          className="
-          text-sm
-          text-gray-400
-          mt-1
-        "
-        >
-          {currentPage.description}
-        </p>
+        <div>
+          <h1
+            className="
+            text-2xl md:text-3xl
+            font-bold
+            bg-gradient-to-r
+            from-white
+            via-blue-400
+            to-purple-500
+            bg-clip-text
+            text-transparent
+          "
+          >
+            {currentPage.title}
+          </h1>
+
+          <p
+            className="
+            text-xs md:text-sm
+            text-gray-400
+            mt-1
+          "
+          >
+            {currentPage.description}
+          </p>
+        </div>
 
       </div>
 

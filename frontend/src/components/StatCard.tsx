@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 interface StatCardProps {
   title: string;
   value: string;
@@ -11,15 +15,17 @@ export default function StatCard({
 }: StatCardProps) {
 
   return (
-    <div
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       className="
-      bg-[#050505]
+      bg-surface
       border border-white/5
       rounded-3xl
       p-5
       flex items-center justify-between
-      hover:border-purple-500/20
-      transition-all duration-300
+      hover:border-primary-border
+      transition-colors duration-300
     "
     >
 
@@ -42,12 +48,12 @@ export default function StatCard({
         to-purple-500/10
         border border-blue-500/20
         flex items-center justify-center
-        text-[#7CB4FF]
+        text-accent
       "
       >
         {icon}
       </div>
 
-    </div>
+    </motion.div>
   );
 }

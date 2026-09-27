@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { signupUser, loginUser } from "@/services/authService";
+import { toast } from "sonner";
 
 export default function AuthCard() {
 
@@ -12,8 +13,6 @@ export default function AuthCard() {
 
   const [loading, setLoading] = useState(false);
 
-  const [message, setMessage] = useState("");
-
   // HANDLE SUBMIT
   const handleSubmit = async (
     e: React.FormEvent<HTMLFormElement>
@@ -22,7 +21,6 @@ export default function AuthCard() {
     e.preventDefault();
 
     setLoading(true);
-    setMessage("");
 
     try {
 
@@ -34,7 +32,11 @@ export default function AuthCard() {
           password,
         });
 
-        setMessage(response.message);
+        toast.success(response.message || "Account created successfully!");
+        
+        // Auto switch to login after signup
+        setIsSignup(false);
+        setPassword(""); // clear password
 
       } else {
 
@@ -53,7 +55,7 @@ export default function AuthCard() {
           JSON.stringify(response.user)
         );
 
-        setMessage(response.message);
+        toast.success(response.message || "Welcome back!");
 
         window.location.href = "/dashboard";
 
@@ -61,7 +63,7 @@ export default function AuthCard() {
 
     } catch (error: any) {
 
-      setMessage(
+      toast.error(
         error?.response?.data?.detail ||
         "Something went wrong..."
       );
@@ -72,19 +74,20 @@ export default function AuthCard() {
 
     }
   };
+  
   return (
 
-    <div className="w-full max-w-3xl min-h-[500px] rounded-[24px] overflow-hidden border border-purple-500/20 bg-[#0B0B0F]/95 backdrop-blur-xl shadow-[0_0_25px_rgba(139,92,246,0.10)] flex">
+    <div className="w-full max-w-3xl min-h-[500px] rounded-[24px] overflow-hidden border border-purple-500/20 bg-surface-alt/95 backdrop-blur-xl shadow-[0_0_25px_rgba(139,92,246,0.10)] flex">
 
       {/* LEFT SIDE */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center px-8 py-9 bg-[#0B0B0F]">
+      <div className="w-full lg:w-1/2 flex items-center justify-center px-8 py-9 bg-surface-alt">
 
         <div className="w-full max-w-xs">
 
           {/* TITLE */}
           <div className="mb-6">
 
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-white to-[#A78BFA] bg-clip-text text-transparent mb-1">
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-white to-accent-purple bg-clip-text text-transparent mb-1">
 
               {isSignup
                 ? "Create Account"
@@ -92,7 +95,7 @@ export default function AuthCard() {
 
             </h1>
 
-            <p className="text-[#C4B5FD] text-xs">
+            <p className="text-accent-lavender text-xs">
 
               {isSignup
                 ? "Start your AI hiring journey today."
@@ -124,7 +127,7 @@ export default function AuthCard() {
                   onChange={(e) =>
                     setFullName(e.target.value)
                   }
-                  className="w-full h-10 rounded-lg bg-[#141414] border border-purple-500/20 px-3 text-white text-xs outline-none focus:border-purple-400 focus:shadow-[0_0_10px_rgba(139,92,246,0.18)] transition-all duration-300"
+                  className="w-full h-10 rounded-lg bg-surface-input border border-purple-500/20 px-3 text-white text-xs outline-none focus:border-purple-400 focus:shadow-[0_0_10px_rgba(139,92,246,0.18)] transition-all duration-300"
                   required
                 />
 
@@ -145,7 +148,7 @@ export default function AuthCard() {
                 onChange={(e) =>
                   setEmail(e.target.value)
                 }
-                className="w-full h-10 rounded-lg bg-[#141414] border border-purple-500/20 px-3 text-white text-xs outline-none focus:border-purple-400 focus:shadow-[0_0_10px_rgba(139,92,246,0.18)] transition-all duration-300"
+                className="w-full h-10 rounded-lg bg-surface-input border border-purple-500/20 px-3 text-white text-xs outline-none focus:border-purple-400 focus:shadow-[0_0_10px_rgba(139,92,246,0.18)] transition-all duration-300"
                 required
               />
 
@@ -165,7 +168,7 @@ export default function AuthCard() {
                 onChange={(e) =>
                   setPassword(e.target.value)
                 }
-                className="w-full h-10 rounded-lg bg-[#141414] border border-purple-500/20 px-3 text-white text-xs outline-none focus:border-purple-400 focus:shadow-[0_0_10px_rgba(139,92,246,0.18)] transition-all duration-300"
+                className="w-full h-10 rounded-lg bg-surface-input border border-purple-500/20 px-3 text-white text-xs outline-none focus:border-purple-400 focus:shadow-[0_0_10px_rgba(139,92,246,0.18)] transition-all duration-300"
                 required
               />
 
@@ -178,7 +181,7 @@ export default function AuthCard() {
 
                 <button
                   type="button"
-                  className="text-[11px] text-[#A78BFA] hover:text-white transition"
+                  className="text-[11px] text-accent-purple hover:text-white transition"
                 >
                   Forgot Password?
                 </button>
@@ -186,20 +189,11 @@ export default function AuthCard() {
               </div>
             )}
 
-            {/* MESSAGE */}
-            {message && (
-
-              <div className="text-[11px] text-center text-green-400">
-                {message}
-              </div>
-
-            )}
-
             {/* BUTTON */}
             <button
               type="submit"
               disabled={loading}
-              className="w-full h-10 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-semibold hover:scale-[1.01] transition-all duration-300 shadow-[0_0_15px_rgba(79,70,229,0.25)]"
+              className={`w-full h-10 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-semibold shadow-[0_0_15px_rgba(79,70,229,0.25)] ${loading ? 'opacity-70' : 'hover:scale-[1.01] transition-all duration-300'}`}
             >
 
               {loading
@@ -217,7 +211,7 @@ export default function AuthCard() {
       {/* RIGHT SIDE */}
       <div className="hidden lg:flex w-1/2 bg-[#101014] flex-col items-center justify-center px-8 text-center border-l border-purple-500/10">
 
-        <h1 className="text-3xl font-bold bg-gradient-to-r from-white to-[#A78BFA] bg-clip-text text-transparent mb-4">
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-white to-accent-purple bg-clip-text text-transparent mb-4">
 
           {isSignup
             ? "Welcome Back!"
@@ -225,7 +219,7 @@ export default function AuthCard() {
 
         </h1>
 
-        <p className="text-[#C4B5FD] text-sm leading-relaxed mb-6 max-w-[240px]">
+        <p className="text-accent-lavender text-sm leading-relaxed mb-6 max-w-[240px]">
 
           {isSignup
             ? "Already have an account? Login and continue exploring intelligent AI-powered recruitment."
@@ -235,11 +229,7 @@ export default function AuthCard() {
 
         <button
           onClick={() => {
-
             setIsSignup(!isSignup);
-
-            setMessage("");
-
           }}
           className="px-6 py-2.5 rounded-full border border-purple-500/20 text-white text-xs font-semibold hover:bg-purple-500/10 transition-all duration-300"
         >
@@ -254,4 +244,3 @@ export default function AuthCard() {
     </div>
   );
 }
-

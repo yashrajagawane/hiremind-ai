@@ -1,12 +1,17 @@
 <div align="center">
 
-<br>
+<div align="center">
 
-<img src="https://img.shields.io/badge/HireMind-AI-8B5CF6?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0xMiAyQzYuNDggMiAyIDYuNDggMiAxMnM0LjQ4IDEwIDEwIDEwIDEwLTQuNDggMTAtMTBTMTcuNTIgMiAxMiAyem0wIDE4Yy00LjQxIDAtOC0zLjU5LTgtOHMzLjU5LTggOC04IDggMy41OSA4IDgtMy41OSA4LTggOHoiLz48L3N2Zz4=&logoColor=white" height="38"/>
+```
+██╗  ██╗██╗██████╗ ███████╗███╗   ███╗██╗███╗   ██╗██████╗       █████╗ ██╗
+██║  ██║██║██╔══██╗██╔════╝████╗ ████║██║████╗  ██║██╔══██╗     ██╔══██╗██║
+███████║██║██████╔╝█████╗  ██╔████╔██║██║██╔██╗ ██║██║  ██║     ███████║██║
+██╔══██║██║██╔══██╗██╔══╝  ██║╚██╔╝██║██║██║╚██╗██║██║  ██║     ██╔══██║██║
+██║  ██║██║██║  ██║███████╗██║ ╚═╝ ██║██║██║ ╚████║██████╔╝     ██║  ██║██║
+╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═════╝      ╚═╝  ╚═╝╚═╝
+```
+</div>
 
-<br><br>
-
-# HireMind AI
 
 ### AI-Powered Resume Intelligence Platform
 
@@ -153,7 +158,7 @@ AI-generated interview questions and preparation strategies tailored to your res
 ┌─────────────────────────────────────────────────────────────────┐
 │                      Client (Browser)                           │
 │                                                                 │
-│   Next.js 16  ·  React 19  ·  TypeScript  ·  Tailwind CSS v4   │
+│   Next.js 16  ·  React 19  ·  TypeScript  ·  Tailwind CSS v4    │
 │   Pages: Dashboard · Resume Review · Job Match · Career Match   │
 │   Career Analytics · Interview Prep · AI Suggestions            │
 │   Salary Insights · Resume History · Settings                   │
@@ -164,9 +169,9 @@ AI-generated interview questions and preparation strategies tailored to your res
                                │  REST API (Axios)
                                ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│                     FastAPI Backend                              │
+│                     FastAPI Backend                             │
 │                                                                 │
-│   Middleware: CORS · SlowAPI Rate Limiting · JWT Auth            │
+│   Middleware: CORS · SlowAPI Rate Limiting · JWT Auth           │
 │   Routes:    /auth/*  ·  /resume/*                              │
 │   Security:  bcrypt password hashing · HS256 JWT tokens         │
 │                                                                 │
@@ -175,14 +180,14 @@ AI-generated interview questions and preparation strategies tailored to your res
         │                  │                  │
         ▼                  ▼                  ▼
 ┌──────────────┐  ┌────────────────┐  ┌───────────────────┐
-│   NLP Layer  │  │   AI Engines   │  │    Database        │
-│              │  │                │  │                    │
-│  spaCy NLP   │  │  Gemini 2.5    │  │   PostgreSQL       │
-│  Regex       │  │  Flash         │  │   (SQLAlchemy ORM) │
-│  Skills DB   │  │                │  │                    │
-│  PyPDF2      │  │  Groq API      │  │   Tables:          │
-│  python-docx │  │  (Llama 3.1    │  │   · users          │
-│              │  │   8B Instant)  │  │   · resume_history │
+│   NLP Layer  │  │   AI Engines   │  │    Database       │
+│              │  │                │  │                   │
+│  spaCy NLP   │  │  Gemini 2.5    │  │   PostgreSQL      │
+│  Regex       │  │  Flash         │  │   (SQLAlchemy ORM)│
+│  Skills DB   │  │                │  │                   │
+│  PyPDF2      │  │  Groq API      │  │   Tables:         │
+│  python-docx │  │  (Llama 3.1    │  │   · users         │
+│              │  │   8B Instant)  │  │   · resume_history│
 └──────────────┘  └────────────────┘  └───────────────────┘
 ```
 
